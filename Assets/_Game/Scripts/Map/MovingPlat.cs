@@ -1,19 +1,37 @@
+using DG.Tweening;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class MovingPlat : MonoBehaviour
 {
-    [SerializeField] private float speed;
+    [SerializeField] private float duration;
     [SerializeField] private Transform platPos;
+    [SerializeField] private EMove moveType;
     [SerializeField] private BoxCollider2D boxCollider2D;
-    private bool isTouching;
+    [SerializeField] private bool isTouching;
 
     private void Update()
     {
         if (isTouching == true)
         {
-            transform.position = Vector2.MoveTowards(transform.position, platPos.position, speed * Time.deltaTime);
+            MoveObj(moveType);
+        }
+    }
+
+    private void MoveObj(EMove moveType)
+    {
+        switch (moveType)
+        {
+            case EMove.NormalMove:
+                transform.DOMove(platPos.position, duration);
+                break;
+            case EMove.LocalMove:
+                transform.DOLocalMove(platPos.position, duration);
+                break;
+            default:
+                Debug.Log("Nothing");
+                break;
         }
     }
 
@@ -26,4 +44,10 @@ public class MovingPlat : MonoBehaviour
             boxCollider2D.enabled = false;
         }
     }
+}
+
+public enum EMove
+{
+    NormalMove = 0,
+    LocalMove = 1
 }

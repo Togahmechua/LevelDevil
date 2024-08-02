@@ -18474,7 +18474,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deadZone: -10
   isDed: 0
-  speed: 6.5
+  speed: 8
+  duration: 1
   direction: 1
   box: {fileID: 3671556422346553511}
   isTouching: 0
@@ -22015,7 +22016,7 @@ Transform:
   m_GameObject: {fileID: 8310122592432294952}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.76, y: 0, z: 0}
+  m_LocalPosition: {x: -1.49, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -22080,7 +22081,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deadZone: -10
   isDed: 0
-  speed: 6.5
+  speed: 8
+  duration: 1
   direction: 1
   box: {fileID: 8629824944694071180}
   isTouching: 0

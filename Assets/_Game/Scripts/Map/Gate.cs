@@ -11,6 +11,7 @@ public class Gate : MonoBehaviour
         PlayerCtrl playerCtrl = Cache.GetCharacter(other);
         if (playerCtrl != null)
         {
+            other.gameObject.SetActive(false);
             anim.SetTrigger(CacheString.TAG_WIN);
         }
     }

@@ -4467,9 +4467,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62ca94f693802354387d0f75379b4eee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 6
+  duration: 1
   platPos: {fileID: 6192706526710967571}
+  moveType: 0
   boxCollider2D: {fileID: 168963010043303538}
+  isTouching: 0
 --- !u!61 &168963010043303538
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4502,7 +4504,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -4.1567526, y: -0.7519753}
+  m_Offset: {x: -3.8796685, y: -0.7519753}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -4513,7 +4515,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.20624733, y: 2.5039506}
+  m_Size: {x: 0.2388444, y: 2.5039506}
   m_EdgeRadius: 0
 --- !u!1 &2090721478031956950
 GameObject:
@@ -9663,9 +9665,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62ca94f693802354387d0f75379b4eee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 6
+  duration: 2.3
   platPos: {fileID: 3314800356124850379}
+  moveType: 0
   boxCollider2D: {fileID: 5673444840334975592}
+  isTouching: 0
 --- !u!61 &5673444840334975592
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -12844,9 +12848,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62ca94f693802354387d0f75379b4eee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  duration: 0
   platPos: {fileID: 0}
+  moveType: 0
   boxCollider2D: {fileID: 3141723608433541085}
+  isTouching: 0
 --- !u!1 &6270204883572666463
 GameObject:
   m_ObjectHideFlags: 0
@@ -15732,7 +15738,7 @@ Transform:
   m_GameObject: {fileID: 8152722584997254417}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 6, y: 0, z: 0}
+  m_LocalPosition: {x: 4, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

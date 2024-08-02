@@ -5339,6 +5339,7 @@ MonoBehaviour:
   deadZone: -10
   isDed: 0
   speed: 8
+  duration: 1
   direction: 1
   box: {fileID: 8631972333276542724}
   isTouching: 0
@@ -12354,9 +12355,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62ca94f693802354387d0f75379b4eee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 8.5
+  duration: 3
   platPos: {fileID: 7604641081435906079}
   boxCollider2D: {fileID: 5567029039290255139}
+  isTouching: 0
 --- !u!1 &6976977701858486227
 GameObject:
   m_ObjectHideFlags: 0

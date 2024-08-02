@@ -1,40 +1,40 @@
+﻿using DG.Tweening;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class DropablePlatform : DestroyOBJ
 {
     [SerializeField] private float speed;
-    [SerializeField] private int direction;
+    [SerializeField] private float duration;
+    [SerializeField] private DirectionEnum direction;
     [SerializeField] private BoxCollider2D box;
     [SerializeField] private bool isTouching;
 
     private void Update()
     {
-        if (isTouching == true)
+        if (isTouching)
         {
-            Move(direction);
+            isTouching = false;
         }
-        DestroyByDistance(transform);
+        /*DestroyByDistance(transform);*/
     }
 
-
-    private void Move(int direction)
+    private void MoveCoroutine(DirectionEnum direction)
     {
         Vector3 moveVector = Vector3.zero;
 
         switch (direction)
         {
-            case (int)DirectionEnum.Up:
+            case DirectionEnum.Up:
                 moveVector = Vector3.up;
                 break;
-            case (int)DirectionEnum.Down:
+            case DirectionEnum.Down:
                 moveVector = Vector3.down;
                 break;
-            case (int)DirectionEnum.Left:
+            case DirectionEnum.Left:
                 moveVector = Vector3.left;
                 break;
-            case (int)DirectionEnum.Right:
+            case DirectionEnum.Right:
                 moveVector = Vector3.right;
                 break;
             default:
@@ -42,16 +42,32 @@ public class DropablePlatform : DestroyOBJ
                 break;
         }
 
-        transform.parent.Translate(moveVector * speed * Time.deltaTime);
+        transform.parent.DOBlendableMoveBy(moveVector * speed, duration).OnComplete(() =>
+        {
+            Debug.Log("A");
+        });
     }
+
+    private void Move(DirectionEnum direction)
+    {
+        if (transform.parent == null)
+        {
+            Debug.LogWarning("Parent Transform is null or destroyed");
+            return;
+        }
+
+        MoveCoroutine(direction);
+    }
+
 
     private void OnTriggerEnter2D(Collider2D other)
     {
         PlayerCtrl player = Cache.GetCharacter(other);
-        if(player != null)
+        if (player != null)
         {
-            box.enabled = false; 
+            box.enabled = false;
             isTouching = true;
+            Move(direction);
         }
     }
 }
@@ -59,7 +75,7 @@ public class DropablePlatform : DestroyOBJ
 public enum DirectionEnum
 {
     Up = 0,
-    Down = 1,    
+    Down = 1,
     Left = 2,
     Right = 3
 }

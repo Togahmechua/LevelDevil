@@ -18496,9 +18496,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62ca94f693802354387d0f75379b4eee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 6
+  duration: 1
   platPos: {fileID: 3326919642040878320}
   boxCollider2D: {fileID: 5875472443745690349}
+  isTouching: 0
 --- !u!61 &5875472443745690349
 BoxCollider2D:
   m_ObjectHideFlags: 0
