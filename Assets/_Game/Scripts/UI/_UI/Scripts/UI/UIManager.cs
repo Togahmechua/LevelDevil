@@ -1,4 +1,4 @@
-﻿///
+///
 /// Create by linh soi - Abi Game studio
 /// mentor Minh tito - CTO Abi Game studio
 /// 
@@ -59,8 +59,8 @@ public class UIManager : Singleton<UIManager>
         {
             GetUI<T>().CloseDirectly();
         }
-    }   
-    
+    }
+
     //close UI with delay time
     //dong ui canvas sau delay time
     public void CloseUI<T>(float delayTime) where T : UICanvas
@@ -143,7 +143,8 @@ public class UIManager : Singleton<UIManager>
 
     private Dictionary<UICanvas, UnityAction> BackActionEvents = new Dictionary<UICanvas, UnityAction>();
     private List<UICanvas> backCanvas = new List<UICanvas>();
-    UICanvas BackTopUI {
+    UICanvas BackTopUI
+    {
         get
         {
             UICanvas canvas = null;
