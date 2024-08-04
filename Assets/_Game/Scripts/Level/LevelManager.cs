@@ -6,61 +6,30 @@ public class LevelManager : MonoBehaviour
 {
     private static LevelManager ins;
     public static LevelManager Ins => ins;
-    public Level level;
-    public List<Level> levelList = new List<Level>();
-    public int CurLevel;
+    public List<Map> mapList;
+    public Map mapScr;
+    public int curMap;
 
 
     private void Awake()
     {
         LevelManager.ins = this;
-        CurLevel = PlayerPrefs.GetInt("CurrentLevel", 0 );
-        LoadLevel();
     }
 
-    private void Update()
+    public void LoadMapByID(int id)
     {
-        if (CurLevel > levelList.Count)
+        if (mapScr != null)
         {
-            CurLevel = levelList.Count;
+            Destroy(mapScr.gameObject);
         }
-    }
 
-    public void LoadLevel()
-    {
-        if (level != null)
+        foreach (Map map in mapList)
         {
-            Destroy(level.gameObject);
+            if (map.id == id)
+            {
+                mapScr = Instantiate(mapList[curMap], transform);
+            }
         }
-        
-        level = Instantiate(levelList[CurLevel], transform);
-        level = FindObjectOfType<Level>();
-    }
-
-    public void NextLevel()
-    {
-        if (level != null)
-        {
-            Destroy(level.gameObject);
-        }
-        
-        level = Instantiate(levelList[CurLevel], transform);
-        level = FindObjectOfType<Level>();
-    }
-
-    public void NewGame()
-    {
-        CurLevel = 0;
-        PlayerPrefs.SetInt("CurrentLevel", CurLevel);
-        PlayerPrefs.Save();
-        LoadLevel();
-    }
-
-    public void ResetMap()
-    {
-        CurLevel--;
-        if (CurLevel < 0) CurLevel = 0;
-        LoadLevel();
     }
 
     public void Quit()

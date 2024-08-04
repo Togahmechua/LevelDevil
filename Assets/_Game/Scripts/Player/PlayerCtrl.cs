@@ -41,15 +41,15 @@ public class PlayerCtrl : DestroyOBJ
         Gate gate = Cache.GetGate(other);
         if (gate != null)
         {
-            LevelManager.Ins.CurLevel++;
-            PlayerPrefs.SetInt("CurrentLevel", LevelManager.Ins.CurLevel);
+            LevelManager.Ins.mapScr.CurLevel++;
+            /*PlayerPrefs.SetInt("CurrentLevel", LevelManager.Ins.mapScr.CurLevel);*/
             Sequence mySequence = DOTween.Sequence();
             // Thêm một delay 2 giây vào sequence
             mySequence.AppendInterval(2f);
             // Sau khi delay, thực hiện hành động
             mySequence.AppendCallback(() =>
             {
-                LevelManager.Ins.NextLevel();
+                LevelManager.Ins.mapScr.NextLevel();
             });
 
             // Chạy sequence

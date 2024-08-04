@@ -27,6 +27,6 @@ public class DestroyOBJ : MonoBehaviour
     private IEnumerator Delay()
     {
         yield return new WaitForSeconds(0.5f);
-        LevelManager.Ins.LoadLevel();
+        LevelManager.Ins.mapScr.LoadLevel();
     }
 }

@@ -42,10 +42,7 @@ public class DropablePlatform : DestroyOBJ
                 break;
         }
 
-        transform.parent.DOBlendableMoveBy(moveVector * speed, duration).OnComplete(() =>
-        {
-            Debug.Log("A");
-        });
+        transform.parent.DOBlendableMoveBy(moveVector * speed, duration);
     }
 
     private void Move(DirectionEnum direction)

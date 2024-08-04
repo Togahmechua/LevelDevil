@@ -15,7 +15,7 @@ TagManager:
   - Ground
   - 
   - 
-  - 
+  - AnimCanvas
   - 
   - 
   - 
@@ -41,4 +41,7 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: AnimCanvas
+    uniqueID: 279674551
     locked: 0

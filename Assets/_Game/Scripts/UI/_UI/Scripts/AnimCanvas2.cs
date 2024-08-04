@@ -3,14 +3,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AnimCanvas : UICanvas
+public class AnimCanvas2 : UICanvas
 {
     private void Start()
     {
-        OnInit1();
+        OnInit2();
     }
 
-    public void OnInit1()
+    public void OnInit2()
     {
         Wait();
     }
@@ -26,7 +26,7 @@ public class AnimCanvas : UICanvas
         mySequence.AppendInterval(2f);
         mySequence.AppendCallback(() =>
         {
-            UIManager.Ins.CloseUI<AnimCanvas>();
+            UIManager.Ins.CloseUI<AnimCanvas2>();
         });
         mySequence.Play();
     }
