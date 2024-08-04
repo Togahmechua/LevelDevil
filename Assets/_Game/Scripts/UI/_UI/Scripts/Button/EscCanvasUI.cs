@@ -17,16 +17,28 @@ public class EscCanvasUI : UICanvas
         escImg.sprite = ecsSpr[0];
     }
 
+    private void Update()
+    {
+        if (Input.GetKey(KeyCode.Escape))
+        {
+            EscFunc();
+            /*Cursor.visible = false;*/
+        }
+    }
+
     private void EscFunc()
     {
         escImg.sprite = ecsSpr[1];
-        Sequence mySequence = DOTween.Sequence();
-        mySequence.AppendInterval(0.5f);
-        mySequence.AppendCallback(() =>
-        {
-            escImg.sprite = ecsSpr[0];
-            UIManager.Ins.OpenUI<SelectLevelUI>();
-            UIManager.Ins.OpenUI<AnimCanvas2>().OnInit2();
-        });
+        UIManager.Ins.OpenUI<AnimCanvas2>().OnInit2();
+        Observer.Notify("Wait", 1f, new Action(NextUI));
+    }
+
+
+    private void NextUI()
+    {
+        escImg.sprite = ecsSpr[0];
+        UIManager.Ins.OpenUI<SelectLevelUI>();
+        UIManager.Ins.OpenUI<CursorCanvas>();
+        UIManager.Ins.CloseUI<EscCanvasUI>();
     }
 }

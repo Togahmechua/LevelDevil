@@ -1,4 +1,5 @@
 using DG.Tweening;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -12,21 +13,17 @@ public class SelectMode : UICanvas
     void Start()
     {
         singleMode.onClick.AddListener(SelectModeUI);
-        singleMode.interactable = false;
-        Sequence sequence = DOTween.Sequence();
-        sequence.AppendInterval(0.1f);
-        sequence.AppendCallback(() =>
-        {
-            singleMode.interactable = true;
-            /*multiMode.onClick.AddListener(SelectModeUI);*/
-        });
-        
     }
 
     private void SelectModeUI()
+    { 
+        UIManager.Ins.OpenUI<AnimCanvas2>();
+        Observer.Notify("Wait", 1f, new Action(NextUI));
+    }
+
+    private void NextUI()
     {
-        UIManager.Ins.CloseUI<SelectMode>();
         UIManager.Ins.OpenUI<SelectLevelUI>();
-        UIManager.Ins.OpenUI<AnimCanvas2>().OnInit2();
+        UIManager.Ins.CloseUI<SelectMode>();
     }
 }

@@ -1,4 +1,5 @@
 ﻿using DG.Tweening;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -42,18 +43,12 @@ public class PlayerCtrl : DestroyOBJ
         if (gate != null)
         {
             LevelManager.Ins.mapScr.CurLevel++;
-            /*PlayerPrefs.SetInt("CurrentLevel", LevelManager.Ins.mapScr.CurLevel);*/
-            Sequence mySequence = DOTween.Sequence();
-            // Thêm một delay 2 giây vào sequence
-            mySequence.AppendInterval(2f);
-            // Sau khi delay, thực hiện hành động
-            mySequence.AppendCallback(() =>
-            {
-                LevelManager.Ins.mapScr.NextLevel();
-            });
-
-            // Chạy sequence
-            mySequence.Play();
+            Observer.Notify("Wait", 2f, new Action(NextLevel));
         }
+    }
+
+    private void NextLevel()
+    {
+        LevelManager.Ins.mapScr.NextLevel();
     }
 }

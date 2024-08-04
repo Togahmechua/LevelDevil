@@ -23,6 +23,7 @@ public class StartScene : UICanvas
     {
         image.DOFillAmount(1, fillDuration).OnComplete(() =>
         {
+            UIManager.Ins.OpenUI<CursorCanvas>();
             UIManager.Ins.OpenUI<SelectMode>();
             UIManager.Ins.OpenUI<AnimCanvas>();
             UIManager.Ins.CloseUI<StartScene>();

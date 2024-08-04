@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -29,10 +30,16 @@ public class LevelState : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
     }
 
     public void OnPointerClick(PointerEventData eventData)
+    {  
+        UIManager.Ins.OpenUI<AnimCanvas2>().OnInit2();
+        UIManager.Ins.CloseUI<CursorCanvas>();
+        Observer.Notify("Wait", 1f, new Action(TransToGamePlay));
+    }
+
+    private void TransToGamePlay()
     {
         LevelManager.Ins.LoadMapByID(id);
-        //Debug.Log("Onclick");
+        UIManager.Ins.OpenUI<EscCanvasUI>();
         UIManager.Ins.CloseUI<SelectLevelUI>();
-        UIManager.Ins.OpenUI<AnimCanvas2>().OnInit2();
     }
 }
