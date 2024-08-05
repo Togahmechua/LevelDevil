@@ -11,19 +11,28 @@ public class EscCanvasUI : UICanvas
     [SerializeField] private Image escImg;
     [SerializeField] private Sprite[] ecsSpr;
 
+    private bool isInteractable = true;
+
     void Start()
     {
         escBut.onClick.AddListener(EscFunc);
         escImg.sprite = ecsSpr[0];
+        DisableInteractionForSeconds(1f);
     }
 
     private void Update()
     {
-        if (Input.GetKey(KeyCode.Escape))
+        if (Input.GetKey(KeyCode.Escape) && isInteractable)
         {
             EscFunc();
             /*Cursor.visible = false;*/
         }
+    }
+
+    public void OnInitEsc()
+    {
+        escImg.sprite = ecsSpr[0];
+        DisableInteractionForSeconds(1f);
     }
 
     private void EscFunc()
@@ -33,6 +42,16 @@ public class EscCanvasUI : UICanvas
         Observer.Notify("Wait", 1f, new Action(NextUI));
     }
 
+    private void DisableInteractionForSeconds(float seconds)
+    {
+        isInteractable = false;
+        escBut.interactable = false;
+        DOVirtual.DelayedCall(seconds, () =>
+        {
+            isInteractable = true;
+            escBut.interactable = true;
+        });
+    }
 
     private void NextUI()
     {

@@ -7,6 +7,7 @@ public class LevelManager : MonoBehaviour
     private static LevelManager ins;
     public static LevelManager Ins => ins;
     public List<Map> mapList;
+    private List<Map> curMaplList = new List<Map>();
     public Map mapScr;
     public int curMap;
 
@@ -20,15 +21,30 @@ public class LevelManager : MonoBehaviour
     {
         if (mapScr != null)
         {
-            Destroy(mapScr.gameObject);
+            DespawnMap();
         }
 
         foreach (Map map in mapList)
         {
             if (map.id == id)
             {
-                mapScr = Instantiate(mapList[curMap], transform);
+               /* mapScr = Instantiate(mapList[curMap], transform);*/
+                mapScr = SimplePool.Spawn<Map>(mapList[curMap]);
+                curMaplList.Add(mapScr);
             }
+        }
+    }
+
+    public void DespawnMap()
+    {
+        if (mapScr != null)
+        {
+            foreach (Map map in curMaplList)
+            {
+                SimplePool.Despawn(map);
+            }
+            curMaplList.Clear();
+            mapScr = null;
         }
     }
 

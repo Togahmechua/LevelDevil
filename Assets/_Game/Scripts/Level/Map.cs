@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Map : MonoBehaviour
+public class Map : GameUnit
 {
     public Level level;
     public List<Level> levelList = new List<Level>();

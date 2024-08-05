@@ -39,7 +39,7 @@ public class LevelState : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
     private void TransToGamePlay()
     {
         LevelManager.Ins.LoadMapByID(id);
-        UIManager.Ins.OpenUI<EscCanvasUI>();
+        UIManager.Ins.OpenUI<EscCanvasUI>().OnInitEsc();
         UIManager.Ins.CloseUI<SelectLevelUI>();
     }
 }
