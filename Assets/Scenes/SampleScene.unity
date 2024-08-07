@@ -155,7 +155,7 @@ MonoBehaviour:
   Pool:
   - root: {fileID: 1363190866}
     prefab: {fileID: 6069246703499115155, guid: a87ebda5f7867bf46996d31c34b47dd2, type: 3}
-    amount: 5
+    amount: 3
     collect: 0
   Particle:
   - root: {fileID: 1553791399}
@@ -621,6 +621,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CanvasParentTF: {fileID: 612352508}
+  escUI: {fileID: 5290695405882049105, guid: 84e92d648d451c04497e1570afb2b41d, type: 3}
+  sllUI: {fileID: 6112781381747753114, guid: 8dd87320defb13641badf004503eb4c3, type: 3}
 --- !u!1 &1363190865
 GameObject:
   m_ObjectHideFlags: 0
@@ -1005,7 +1007,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1699350610
 Transform:
   m_ObjectHideFlags: 0

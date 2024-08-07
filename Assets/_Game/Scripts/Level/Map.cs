@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -8,6 +8,7 @@ public class Map : GameUnit
     public List<Level> levelList = new List<Level>();
     public int CurLevel;
     public int id;
+    private bool isComplete;
 
     private void Awake()
     {
@@ -17,24 +18,18 @@ public class Map : GameUnit
 
     private void Update()
     {
-        if (CurLevel > levelList.Count)
+        if (CurLevel >= levelList.Count && !isComplete)
         {
             CurLevel = levelList.Count;
-
+            /*LevelManager.Ins.curMap++;*/
+            UIManager.Ins.escUI.EscFunc();
+           /* PlayerPrefs.SetInt("CurrentMap", LevelManager.Ins.curMap);
+            PlayerPrefs.Save();*/
+            isComplete = true;
         }
     }
 
     public void LoadLevel()
-    {
-        if (level != null)
-        {
-            Destroy(level.gameObject);
-        }
-
-        level = Instantiate(levelList[CurLevel], transform);
-    }
-
-    public void NextLevel()
     {
         if (level != null)
         {

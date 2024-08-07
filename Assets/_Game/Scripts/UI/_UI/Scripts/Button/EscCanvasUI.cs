@@ -25,6 +25,7 @@ public class EscCanvasUI : UICanvas
         if (Input.GetKey(KeyCode.Escape) && isInteractable)
         {
             EscFunc();
+            isInteractable = false;
             /*Cursor.visible = false;*/
         }
     }
@@ -35,7 +36,7 @@ public class EscCanvasUI : UICanvas
         DisableInteractionForSeconds(1f);
     }
 
-    private void EscFunc()
+    public void EscFunc()
     {
         escImg.sprite = ecsSpr[1];
         UIManager.Ins.OpenUI<AnimCanvas2>().OnInit2();
@@ -55,8 +56,10 @@ public class EscCanvasUI : UICanvas
 
     private void NextUI()
     {
+        Debug.Log("NextUI");
         escImg.sprite = ecsSpr[0];
         UIManager.Ins.OpenUI<SelectLevelUI>();
+   /*     UIManager.Ins.sllUI.LoadGate();*/
         UIManager.Ins.OpenUI<CursorCanvas>();
         UIManager.Ins.CloseUI<EscCanvasUI>();
     }

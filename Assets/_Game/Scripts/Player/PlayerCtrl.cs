@@ -56,6 +56,6 @@ public class PlayerCtrl : DestroyOBJ
 
     private void NextLevel()
     {
-        LevelManager.Ins.mapScr.NextLevel();
+        LevelManager.Ins.mapScr.LoadLevel();
     }
 }
