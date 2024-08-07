@@ -3,6 +3,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using EZCameraShake;
 
 public class PlayerCtrl : DestroyOBJ
 {
@@ -17,7 +18,7 @@ public class PlayerCtrl : DestroyOBJ
     {
         if (!isDed)
         {
-            DestroyByDistance(this);      
+            DestroyByDistance(this);
         }
     }
 
@@ -26,8 +27,7 @@ public class PlayerCtrl : DestroyOBJ
         if (other.gameObject.transform.position.y < deadZone && !isDed)
         {
             base.DestroyByDistance(other);
-            newOnInit();
-            isDed = true;
+            Die();
         }
     }
 
@@ -35,6 +35,13 @@ public class PlayerCtrl : DestroyOBJ
     {
         playerMovement.OnInit();
         isDed = false;
+    }
+
+    public void Die()
+    {
+        ParticlePool.Play(ParticleType.DieEff, transform.position, Quaternion.identity);
+        CameraShaker.Instance.ShakeOnce(4f, 4f, 0.1f, 0.1f);
+        isDed = true;
     }
 
     private void OnTriggerEnter2D(Collider2D other)
