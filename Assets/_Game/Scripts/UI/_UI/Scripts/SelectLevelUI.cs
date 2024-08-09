@@ -4,7 +4,7 @@ using UnityEngine;
 public class SelectLevelUI : UICanvas
 {
     [SerializeField] private GameObject[] listGOBJ;
-    [SerializeField] private int gateIndex;
+    [SerializeField] private int gateNum;
 
     private void Start()
     {
@@ -13,9 +13,10 @@ public class SelectLevelUI : UICanvas
 
     public void LoadGate()
     {
-        gateIndex = LevelManager.Ins.curMap + 1;
+        gateNum = LevelManager.Ins.curMap + 1;
+        Debug.Log(gateNum);
 
-        for (int i = 0; i < gateIndex; i++)
+        for (int i = 0; i < gateNum; i++)
         {
             listGOBJ[i].gameObject.SetActive(true);
         }

@@ -1632,7 +1632,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: 83c4d6300d6e9fa4e9434a3712b7ecdb, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -24350,6 +24350,10 @@ PrefabInstance:
     - target: {fileID: 6745358664244257838, guid: 2d2044abc2f770a43a6448de0668a841, type: 3}
       propertyPath: m_Name
       value: LevelBoxHolder
+      objectReference: {fileID: 0}
+    - target: {fileID: 7347143140552464903, guid: 2d2044abc2f770a43a6448de0668a841, type: 3}
+      propertyPath: m_SortingOrder
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

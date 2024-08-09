@@ -37,7 +37,6 @@ public class UIManager : Singleton<UIManager>
     //canvas chua dung cac canvas con, nen la mot canvas - root de chua cac canvas nay
     public Transform CanvasParentTF;
     public EscCanvasUI escUI;
-    public SelectLevelUI sllUI;
 
     #region Canvas
 

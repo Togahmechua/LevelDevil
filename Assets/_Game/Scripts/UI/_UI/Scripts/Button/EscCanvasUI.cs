@@ -58,8 +58,7 @@ public class EscCanvasUI : UICanvas
     {
         Debug.Log("NextUI");
         escImg.sprite = ecsSpr[0];
-        UIManager.Ins.OpenUI<SelectLevelUI>();
-   /*     UIManager.Ins.sllUI.LoadGate();*/
+        UIManager.Ins.OpenUI<SelectLevelUI>().LoadGate();
         UIManager.Ins.OpenUI<CursorCanvas>();
         UIManager.Ins.CloseUI<EscCanvasUI>();
     }

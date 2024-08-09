@@ -1,32 +1,46 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Map : GameUnit
 {
+    public int id;
     public Level level;
     public List<Level> levelList = new List<Level>();
     public int CurLevel;
-    public int id;
-    private bool isComplete;
+    public ELevel eLevl;
+
+    private bool win;   
 
     private void Awake()
     {
-       /* CurLevel = PlayerPrefs.GetInt("CurrentLevel", 0);*/
         LoadLevel();
     }
 
     private void Update()
     {
-        if (CurLevel >= levelList.Count && !isComplete)
+        if (CurLevel >= levelList.Count && !win)
         {
+            
             CurLevel = levelList.Count;
-            /*LevelManager.Ins.curMap++;*/
-            UIManager.Ins.escUI.EscFunc();
-           /* PlayerPrefs.SetInt("CurrentMap", LevelManager.Ins.curMap);
-            PlayerPrefs.Save();*/
-            isComplete = true;
+            //So sanh 2 enum neu enum giong nhau va chua win map (iswon = false) thi thay doi bool va tang curmap
+            if (eLevl == LevelManager.Ins.mapSO.mapList[LevelManager.Ins.curMap].eLevel && LevelManager.Ins.mapSO.mapList[LevelManager.Ins.curMap].isWon == false)
+            {
+                LevelManager.Ins.mapSO.mapList[LevelManager.Ins.curMap].isWon = true;
+                Debug.Log("mapSO.mapList[CurLevel].isWon");
+                LevelManager.Ins.curMap++; 
+            }
+            win = true;
+            Observer.Notify("Wait", 1f, new Action(WaitDoorAnim));
         }
+    }
+
+    private void WaitDoorAnim()
+    {
+        UIManager.Ins.escUI.EscFunc();
+        /* PlayerPrefs.SetInt("CurrentMap", LevelManager.Ins.curMap);
+         PlayerPrefs.Save();*/
     }
 
     public void LoadLevel()

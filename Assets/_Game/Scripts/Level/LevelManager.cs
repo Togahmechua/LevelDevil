@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -10,7 +10,7 @@ public class LevelManager : MonoBehaviour
     private List<Map> curMaplList = new List<Map>();
     public Map mapScr;
     public int curMap;
-
+    public MapSO mapSO;
 
     private void Awake()
     {
@@ -30,7 +30,7 @@ public class LevelManager : MonoBehaviour
             if (map.id == id)
             {
                /* mapScr = Instantiate(mapList[curMap], transform);*/
-                mapScr = SimplePool.Spawn<Map>(mapList[curMap]);
+                mapScr = SimplePool.Spawn<Map>(mapList[id]);
                 curMaplList.Add(mapScr);
             }
         }
