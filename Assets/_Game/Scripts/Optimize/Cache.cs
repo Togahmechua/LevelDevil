@@ -28,4 +28,16 @@ public class Cache
 
         return gates[collider];
     }
+
+    private static Dictionary<Collider2D, Spikes> spikes = new Dictionary<Collider2D, Spikes>();
+
+    public static Spikes GetSpikes(Collider2D collider)
+    {
+        if (!spikes.ContainsKey(collider))
+        {
+            spikes.Add(collider, collider.GetComponent<Spikes>());
+        }
+
+        return spikes[collider];
+    }
 }

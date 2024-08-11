@@ -10,6 +10,7 @@ public class PlayerMovement : MonoBehaviour
 
     [Header("Movement")]
     [SerializeField] private float speed;
+    [SerializeField] private float updateSpeed;
     private float dirX = 0f;
 
     [Header("Player")]
@@ -42,7 +43,7 @@ public class PlayerMovement : MonoBehaviour
         anim.SetTrigger(CacheString.TAG_APPEAR);
         yield return new WaitForSeconds(0.5f);
         // this.enabled = true;
-        this.speed = 5f;
+        this.speed = updateSpeed;
         
     }
 

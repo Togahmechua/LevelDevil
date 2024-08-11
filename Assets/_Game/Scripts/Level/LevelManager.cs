@@ -15,7 +15,7 @@ public class LevelManager : MonoBehaviour
     private void Awake()
     {
         LevelManager.ins = this;
-        /*curMap = PlayerPrefs.GetInt("CurrentMap", 0);*/
+        curMap = PlayerPrefs.GetInt("CurrentMap", 0);
     }
 
     public void LoadMapByID(int id)

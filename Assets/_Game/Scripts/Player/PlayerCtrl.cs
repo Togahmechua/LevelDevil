@@ -50,11 +50,25 @@ public class PlayerCtrl : DestroyOBJ
         if (gate != null)
         {
             LevelManager.Ins.mapScr.CurLevel++;
-            Observer.Notify("Wait", 2f, new Action(NextLevel));
+            Observer.Notify("Wait", 1f, new Action(OpenAnim));
+        }
+
+        Spikes spike = Cache.GetSpikes(other);
+        if (spike != null)
+        {
+            Debug.Log("Player Died");
+            Die();
+            LoadLevel();
         }
     }
 
-    private void NextLevel()
+    private void OpenAnim()
+    {
+        UIManager.Ins.OpenUI<AnimCanvas2>().OnInit2();
+        Observer.Notify("Wait", 1f, new Action(LoadLevel));
+    }
+
+    private void LoadLevel()
     {
         LevelManager.Ins.mapScr.LoadLevel();
     }

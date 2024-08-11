@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mapList:
   - eLevel: 1
-    isWon: 1
+    isWon: 0
   - eLevel: 2
     isWon: 0
   - eLevel: 3

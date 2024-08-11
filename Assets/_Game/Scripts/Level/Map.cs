@@ -39,8 +39,8 @@ public class Map : GameUnit
     private void WaitDoorAnim()
     {
         UIManager.Ins.escUI.EscFunc();
-        /* PlayerPrefs.SetInt("CurrentMap", LevelManager.Ins.curMap);
-         PlayerPrefs.Save();*/
+        PlayerPrefs.SetInt("CurrentMap", LevelManager.Ins.curMap);
+        PlayerPrefs.Save();
     }
 
     public void LoadLevel()
