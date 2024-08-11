@@ -11,7 +11,8 @@ public class LevelState : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
     [SerializeField] private Image img;
     [SerializeField] private GameObject effect;
     [SerializeField] private int id;
-
+    [SerializeField] private Color color;
+ 
     private void Start()
     {
         img.sprite = ArrImages[0];
@@ -21,6 +22,7 @@ public class LevelState : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
     {
         img.sprite = ArrImages[1];
         effect.SetActive(true);
+        LevelManager.Ins.imgBackGround.color = color;
     }
 
     public void OnPointerExit(PointerEventData eventData)

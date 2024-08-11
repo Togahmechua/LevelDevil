@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Cache 
+public class Cache
 {
     private static Dictionary<Collider2D, PlayerCtrl> players = new Dictionary<Collider2D, PlayerCtrl>();
 
@@ -15,7 +15,7 @@ public class Cache
 
         return players[collider];
     }
-    
+
 
     private static Dictionary<Collider2D, Gate> gates = new Dictionary<Collider2D, Gate>();
 
@@ -39,5 +39,17 @@ public class Cache
         }
 
         return spikes[collider];
+    }
+
+    private static Dictionary<Collider2D, Coin> coins = new Dictionary<Collider2D, Coin>();
+
+    public static Coin GetCoins(Collider2D collider)
+    {
+        if (!coins.ContainsKey(collider))
+        {   
+            coins.Add(collider, collider.GetComponent<Coin>());
+        }
+
+        return coins[collider];
     }
 }

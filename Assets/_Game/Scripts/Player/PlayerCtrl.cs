@@ -60,6 +60,12 @@ public class PlayerCtrl : DestroyOBJ
             Die();
             LoadLevel();
         }
+        
+        Coin coins = Cache.GetCoins(other);
+        if (coins != null)
+        {
+            coins.isTook();
+        }
     }
 
     private void OpenAnim()

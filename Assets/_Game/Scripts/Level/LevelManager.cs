@@ -1,16 +1,21 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class LevelManager : MonoBehaviour
 {
     private static LevelManager ins;
     public static LevelManager Ins => ins;
+
     public List<Map> mapList;
-    private List<Map> curMaplList = new List<Map>();
     public Map mapScr;
     public int curMap;
     public MapSO mapSO;
+    public Image imgBackGround;
+
+    private List<Map> curMaplList = new List<Map>();
+    
 
     private void Awake()
     {
