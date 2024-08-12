@@ -6,7 +6,6 @@ using UnityEngine;
 public class MovingObj : MonoBehaviour
 {
     [SerializeField] private Transform movePos;
-    [SerializeField] private float speed;
     [SerializeField] private float duration;
     [SerializeField] private BoxCollider2D box;
     [SerializeField] private bool isTouching;

@@ -451,7 +451,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movePos: {fileID: 6897636005211591076}
-  speed: 5
   duration: 0.5
   box: {fileID: 7568964710769079813}
   isTouching: 0
@@ -932,7 +931,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movePos: {fileID: 3435502480276498157}
-  speed: 5
   duration: 0.5
   box: {fileID: 1954413585475636417}
   isTouching: 0
@@ -6630,7 +6628,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1274085221684192848, guid: 4e9701cfbc8348045bf436fe914bd217, type: 3}
       propertyPath: m_Size.y
-      value: 0.067489624
+      value: 0.78809774
       objectReference: {fileID: 0}
     - target: {fileID: 1274085221684192848, guid: 4e9701cfbc8348045bf436fe914bd217, type: 3}
       propertyPath: m_Offset.x
@@ -6638,7 +6636,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1274085221684192848, guid: 4e9701cfbc8348045bf436fe914bd217, type: 3}
       propertyPath: m_Offset.y
-      value: -0.4662552
+      value: -0.105951115
       objectReference: {fileID: 0}
     - target: {fileID: 1521848857304955681, guid: 4e9701cfbc8348045bf436fe914bd217, type: 3}
       propertyPath: m_LocalPosition.x

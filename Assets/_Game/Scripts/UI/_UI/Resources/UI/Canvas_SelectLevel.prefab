@@ -1418,7 +1418,7 @@ MonoBehaviour:
   img: {fileID: 1802270356121531042}
   effect: {fileID: 3302645629148197846}
   id: 4
-  color: {r: 0.89411765, g: 0.76862746, b: 0.28235295, a: 0}
+  color: {r: 0.89411765, g: 0.76862746, b: 0.28235295, a: 1}
 --- !u!1 &1917359196848095506
 GameObject:
   m_ObjectHideFlags: 0
@@ -2830,7 +2830,7 @@ MonoBehaviour:
   img: {fileID: 3208363907444301342}
   effect: {fileID: 1093757511626341141}
   id: 2
-  color: {r: 0.972549, g: 0.78039217, b: 0.3137255, a: 0}
+  color: {r: 0.972549, g: 0.78039217, b: 0.3137255, a: 1}
 --- !u!1 &3178117408903883799
 GameObject:
   m_ObjectHideFlags: 0
@@ -3877,7 +3877,7 @@ MonoBehaviour:
   img: {fileID: 2170017171712434749}
   effect: {fileID: 162701275818119586}
   id: 3
-  color: {r: 0.972549, g: 0.78039217, b: 0.3137255, a: 0}
+  color: {r: 0.972549, g: 0.78039217, b: 0.3137255, a: 1}
 --- !u!1 &4932235832821052231
 GameObject:
   m_ObjectHideFlags: 0
@@ -4475,7 +4475,7 @@ MonoBehaviour:
   img: {fileID: 6990921589862893006}
   effect: {fileID: 1467079468515091852}
   id: 5
-  color: {r: 0, g: 0, b: 0, a: 0}
+  color: {r: 0, g: 0, b: 0, a: 1}
 --- !u!1 &6354243467409600791
 GameObject:
   m_ObjectHideFlags: 0
@@ -4998,7 +4998,7 @@ MonoBehaviour:
   img: {fileID: 7300370336254471027}
   effect: {fileID: 322959552213819446}
   id: 1
-  color: {r: 0.9607843, g: 0.69411767, b: 0.22745098, a: 0}
+  color: {r: 0.9607843, g: 0.69411767, b: 0.22745098, a: 1}
 --- !u!1 &6951656096242265323
 GameObject:
   m_ObjectHideFlags: 0
