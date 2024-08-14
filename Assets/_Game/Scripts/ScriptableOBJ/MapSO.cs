@@ -14,6 +14,22 @@ public class MapSO : ScriptableObject
         public ELevel eLevel;
         public bool isWon;
     }
+
+    public void LoadWinStates()
+    {
+        for (int i = 0; i < mapList.Count; i++)
+        {
+            string key = "MapWin_" + i;
+            if (PlayerPrefs.GetInt(key, 0) == 1) // Default value is 0 if not found
+            {
+                LevelManager.Ins.mapSO.mapList[i].isWon = true;
+            }
+            else
+            {
+                LevelManager.Ins.mapSO.mapList[i].isWon = false;
+            }
+        }
+    }
 }
 
 public enum ELevel

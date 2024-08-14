@@ -9,8 +9,11 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private Animator anim;
 
     [Header("Movement")]
+    public EControlType controlType;
+
     [SerializeField] private float speed;
     [SerializeField] private float updateSpeed;
+    [SerializeField] private bool canJump = true;
     private float dirX = 0f;
 
     [Header("Player")]
@@ -28,7 +31,7 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        Move();
+        Move(controlType);
     }
 
     public void OnInit()
@@ -47,18 +50,33 @@ public class PlayerMovement : MonoBehaviour
         
     }
 
-    private void Move()
+    private void Move(EControlType eControlType)
     {
         dirX = Input.GetAxisRaw("Horizontal");
-        rb.velocity = new Vector2(dirX * speed, rb.velocity.y);
-        ChangeAnim("IsRunning", dirX != 0 ? true : false);
 
-        if (Mathf.Abs(dirX) > 0.1f)
+        switch(eControlType)
         {
-            model.rotation = Quaternion.Euler(new Vector3(0f, dirX > 0 ? 0f : 180f, 0f));   
+            case EControlType.NormalMove:
+                //Di chuyen bthg
+                rb.velocity = new Vector2(dirX * speed, rb.velocity.y);
+                if (Mathf.Abs(dirX) > 0.1f)
+                {
+                    model.rotation = Quaternion.Euler(new Vector3(0f, dirX > 0 ? 0f : 180f, 0f));
+                }
+                break;
+            case EControlType.SpecialMove:
+                //Di chuyen nguoc
+                rb.velocity = new Vector2(-dirX * speed, rb.velocity.y);
+                if (Mathf.Abs(dirX) > 0.1f)
+                {
+                    model.rotation = Quaternion.Euler(new Vector3(0f, dirX < 0 ? 0f : 180f, 0f));
+                }
+                break;
         }
 
-        if (Input.GetButtonDown("Jump") && IsGrounded())
+        ChangeAnim("IsRunning", dirX != 0 ? true : false);
+
+        if (Input.GetButtonDown("Jump") && IsGrounded() && canJump)
         {
             Jump();
         }
@@ -73,6 +91,20 @@ public class PlayerMovement : MonoBehaviour
         {
             ChangeAnim(CacheString.TAG_ISRUNNING, false);
             // isJumping = false;
+        }
+    }
+
+    public void ChangeMoveType()
+    {
+        if (controlType == EControlType.NormalMove)
+        {
+            controlType = EControlType.SpecialMove;
+            Debug.Log(controlType);
+        }
+        else if (controlType == EControlType.SpecialMove)
+        {
+            controlType = EControlType.NormalMove;
+            Debug.Log(controlType);
         }
     }
 
@@ -101,4 +133,10 @@ public class PlayerMovement : MonoBehaviour
         Gizmos.DrawRay(transform.position, Vector2.down * distance);
         Gizmos.color = Color.red;
     }
+}
+
+public enum EControlType
+{
+    NormalMove = 0,
+    SpecialMove = 1
 }

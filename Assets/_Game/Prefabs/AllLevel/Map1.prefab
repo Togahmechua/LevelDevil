@@ -49,9 +49,5 @@ MonoBehaviour:
   level: {fileID: 0}
   levelList:
   - {fileID: -8132541311023869924, guid: ebe6637f37fcee04aa632975492b2305, type: 3}
-  - {fileID: -6056315322592274622, guid: d6104afbb4e979f479ef3284597d8168, type: 3}
-  - {fileID: 6696606415103869462, guid: 31fe13783e2c2194f98906f35331e694, type: 3}
-  - {fileID: 3726486517537591969, guid: d01f4c31ee1e69141a19e2ce199e2080, type: 3}
-  - {fileID: 7783102934320197649, guid: c7a2124ff92a6aa4497019a0778c4294, type: 3}
   CurLevel: 0
   eLevl: 1

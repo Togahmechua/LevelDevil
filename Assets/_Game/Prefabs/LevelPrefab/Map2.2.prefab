@@ -381,15 +381,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anim: {fileID: 9125245237758813885}
+  controlType: 0
   speed: 0
   updateSpeed: 4
+  canJump: 1
   model: {fileID: 2802156042808154697}
   rb: {fileID: 33353394411486830}
   coll: {fileID: 5480020418539141080}
   jumpableGround:
     serializedVersion: 2
     m_Bits: 64
-  JumpForce: 7.5
+  JumpForce: 9
   distance: 0.4
 --- !u!1 &6105248627111393264
 GameObject:

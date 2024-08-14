@@ -16,7 +16,6 @@ public class Cache
         return players[collider];
     }
 
-
     private static Dictionary<Collider2D, Gate> gates = new Dictionary<Collider2D, Gate>();
 
     public static Gate GetGate(Collider2D collider)
@@ -51,5 +50,17 @@ public class Cache
         }
 
         return coins[collider];
+    }
+
+    private static Dictionary<Collider2D, ChangeMoveType> changeMoveType = new Dictionary<Collider2D, ChangeMoveType>();
+
+    public static ChangeMoveType GetChangeMoveType(Collider2D collider)
+    {
+        if (!changeMoveType.ContainsKey(collider))
+        {
+            changeMoveType.Add(collider, collider.GetComponent<ChangeMoveType>());
+        }
+
+        return changeMoveType[collider];
     }
 }

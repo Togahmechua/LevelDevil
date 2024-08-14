@@ -11986,8 +11986,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anim: {fileID: 1859021374028222188}
+  controlType: 0
   speed: 0
   updateSpeed: 4
+  canJump: 1
   model: {fileID: 1320704354935671251}
   rb: {fileID: 8026589687886364350}
   coll: {fileID: 2259791109075609323}

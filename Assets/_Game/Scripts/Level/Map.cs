@@ -28,6 +28,7 @@ public class Map : GameUnit
             if (eLevl == LevelManager.Ins.mapSO.mapList[LevelManager.Ins.curMap].eLevel && LevelManager.Ins.mapSO.mapList[LevelManager.Ins.curMap].isWon == false)
             {
                 LevelManager.Ins.mapSO.mapList[LevelManager.Ins.curMap].isWon = true;
+                SaveWinState(LevelManager.Ins.curMap);
                 Debug.Log("mapSO.mapList[CurLevel].isWon");
                 LevelManager.Ins.curMap++; 
             }
@@ -53,18 +54,11 @@ public class Map : GameUnit
         level = Instantiate(levelList[CurLevel], transform);
     }
 
-    public void NewGame()
+    private void SaveWinState(int mapIndex)
     {
-        CurLevel = 0;
-        /*PlayerPrefs.SetInt("CurrentLevel", CurLevel);
-        PlayerPrefs.Save();*/
-        LoadLevel();
-    }
-
-    public void ResetMap()
-    {
-        CurLevel--;
-        if (CurLevel < 0) CurLevel = 0;
-        LoadLevel();
+        string key = "MapWin_" + mapIndex;
+        PlayerPrefs.SetInt(key, 1); // Save 1 to indicate the map is won
+        PlayerPrefs.Save();
+        LevelManager.Ins.mapSO.LoadWinStates();
     }
 }

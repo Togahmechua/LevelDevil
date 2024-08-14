@@ -23,3 +23,11 @@ MonoBehaviour:
     isWon: 0
   - eLevel: 5
     isWon: 0
+  - eLevel: 6
+    isWon: 0
+  - eLevel: 7
+    isWon: 0
+  - eLevel: 8
+    isWon: 0
+  - eLevel: 9
+    isWon: 0

@@ -66,6 +66,14 @@ public class PlayerCtrl : DestroyOBJ
         {
             coins.isTook();
         }
+
+        ChangeMoveType changeMoveType = Cache.GetChangeMoveType(other);
+        if (changeMoveType != null)
+        {
+            playerMovement.ChangeMoveType();
+            CameraShaker.Instance.ShakeOnce(4f, 4f, 0.1f, 0.1f);
+            changeMoveType.DeactiveBox();
+        }
     }
 
     private void OpenAnim()

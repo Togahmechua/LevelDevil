@@ -21,6 +21,7 @@ public class LevelManager : MonoBehaviour
     {
         LevelManager.ins = this;
         curMap = PlayerPrefs.GetInt("CurrentMap", 0);
+        mapSO.LoadWinStates();
     }
 
     public void LoadMapByID(int id)
