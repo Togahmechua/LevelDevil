@@ -8,4 +8,6 @@ public class CacheString : MonoBehaviour
     public static string TAG_ISRUNNING = "IsJumping";
     public static string TAG_APPEAR = "Appear";
     public static string TAG_GROUND = "Ground";
+    public static string TAG_SPRING = "Spring";
+    public static string TAG_IDLE = "Idle";
 }

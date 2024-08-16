@@ -9,8 +9,15 @@ public class StepByStepMover : MonoBehaviour
     [SerializeField] private List<MoveAction> moveActions = new List<MoveAction>();
     [SerializeField] private BoxCollider2D box;
     [SerializeField] private Transform movingObj;
+    [SerializeField] private EDeActiveBox eDeactiveBox;
     private int currentActionIndex = 0;
     private bool isMoving = false;
+
+    public void DoMove()
+    {
+        isMoving = true;
+        StartCoroutine(MoveToPositions());
+    }
 
     [Serializable]
     public class MoveAction
@@ -27,7 +34,16 @@ public class StepByStepMover : MonoBehaviour
         {
             isMoving = true;
             StartCoroutine(MoveToPositions());
-            box.enabled = false;
+
+            switch(eDeactiveBox)
+            {
+                case EDeActiveBox.DeActive:
+                    box.enabled = false;
+                    break;
+                case EDeActiveBox.Active:
+                    box.enabled = true;
+                    break;
+            }
         }
     }
 
@@ -64,4 +80,10 @@ public class StepByStepMover : MonoBehaviour
         // Đảm bảo đối tượng đạt chính xác vị trí đích sau khi hoàn thành việc di chuyển
         movingObj.position = targetPosition;
     }
+}
+
+public enum EDeActiveBox
+{
+    DeActive = 0,
+    Active = 1
 }
