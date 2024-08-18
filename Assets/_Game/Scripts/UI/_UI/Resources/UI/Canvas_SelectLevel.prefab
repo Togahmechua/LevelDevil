@@ -1702,7 +1702,7 @@ MonoBehaviour:
   img: {fileID: 7260177334510343000}
   effect: {fileID: 2213098433007839833}
   id: 8
-  color: {r: 0, g: 0, b: 0, a: 0}
+  color: {r: 0.8039216, g: 0.7137255, b: 0.49019608, a: 1}
 --- !u!1 &2213098433007839833
 GameObject:
   m_ObjectHideFlags: 0
@@ -4617,7 +4617,7 @@ MonoBehaviour:
   img: {fileID: 6759608088039838898}
   effect: {fileID: 2475884716246063941}
   id: 7
-  color: {r: 0, g: 0, b: 0, a: 0}
+  color: {r: 0.92941177, g: 0.6, b: 0.4392157, a: 1}
 --- !u!1 &6454362034631491419
 GameObject:
   m_ObjectHideFlags: 0

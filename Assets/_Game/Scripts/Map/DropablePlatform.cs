@@ -4,11 +4,21 @@ using UnityEngine;
 
 public class DropablePlatform : DestroyOBJ
 {
+    [SerializeField] private Transform movingObj;
     [SerializeField] private float speed;
     [SerializeField] private float duration;
     [SerializeField] private DirectionEnum direction;
     [SerializeField] private BoxCollider2D box;
     [SerializeField] private bool isTouching;
+
+
+    private void Start()
+    {
+        if (movingObj == null)
+        {
+            movingObj = transform.parent;
+        }
+    }
 
     private void Update()
     {
@@ -42,14 +52,15 @@ public class DropablePlatform : DestroyOBJ
                 break;
         }
 
-        transform.parent.DOBlendableMoveBy(moveVector * speed, duration);
+        movingObj.DOBlendableMoveBy(moveVector * speed, duration);
     }
 
     private void Move(DirectionEnum direction)
     {
-        if (transform.parent == null)
+        if (movingObj == null)
         {
-            Debug.LogWarning("Parent Transform is null or destroyed");
+            
+            Debug.LogWarning("Parent Transform is null");
             return;
         }
 

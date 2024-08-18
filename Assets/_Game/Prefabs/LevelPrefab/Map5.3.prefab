@@ -753,8 +753,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f63306ff94d8c046aba6626b055a153, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  obj: {fileID: 8589287846468803324}
   box: {fileID: 8209704780880425119}
+  listObj:
+  - obj: {fileID: 8589287846468803324}
+    delayTime: 0
+  etype: 0
 --- !u!61 &8209704780880425119
 BoxCollider2D:
   m_ObjectHideFlags: 0

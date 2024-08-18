@@ -24,7 +24,7 @@ public class StepByStepMover : MonoBehaviour
     {
         public Transform movePos;
         public float speed;
-        public float duration;
+        public float delayTime;
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -53,7 +53,7 @@ public class StepByStepMover : MonoBehaviour
         {
             MoveAction action = moveActions[currentActionIndex];
             yield return StartCoroutine(MoveToPosition(action.movePos.position, action.speed));
-            yield return new WaitForSeconds(action.duration);
+            yield return new WaitForSeconds(action.delayTime);
 
             currentActionIndex++;
         }

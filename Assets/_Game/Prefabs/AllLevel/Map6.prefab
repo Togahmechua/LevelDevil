@@ -44,14 +44,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21eedca747da56440be7ec5a0da9ec20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  poolType: 0
+  poolType: 6
   id: 5
   level: {fileID: 0}
   levelList:
   - {fileID: 4066349010025412474, guid: be97fcc040a2be64d842a8f7c624476c, type: 3}
-  - {fileID: 4153125702375332514, guid: 876f09650239b864cbda9a89c3722e50, type: 3}
-  - {fileID: 8384600302256385896, guid: 0d9851a48a0a8f24381066ed751ac857, type: 3}
-  - {fileID: 5048821947251696739, guid: 7e1780f89d0667d4787f05e7b96dfb63, type: 3}
-  - {fileID: 3506942696396239163, guid: d6a4f03824aa2a54d9886027241fd72e, type: 3}
   CurLevel: 0
   eLevl: 6

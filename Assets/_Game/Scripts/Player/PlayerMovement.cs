@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
@@ -12,7 +13,7 @@ public class PlayerMovement : MonoBehaviour
     public EControlType controlType;
 
     [SerializeField] private float speed;
-    [SerializeField] private float updateSpeed;
+    public float updateSpeed;
     [SerializeField] private bool canJump = true;
     private float dirX = 0f;
 
@@ -21,13 +22,11 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private CapsuleCollider2D coll;
     [SerializeField] private LayerMask jumpableGround;
-    
+
 
     [Header("Jump")]
-    // [SerializeField] private float jumpDuration = 0.5f;
-    [SerializeField] private float JumpForce = 7.5f;
+    public float JumpForce = 7.5f;
     [SerializeField] private float distance;
-    // private bool isJumping;
 
     void Update()
     {
@@ -125,13 +124,17 @@ public class PlayerMovement : MonoBehaviour
 
     private bool IsGrounded()
     {
-        return Physics2D.Raycast(transform.position, Vector2.down, distance, jumpableGround);
+        //tinh khoang cach theo scale
+        float scaledDistance = distance * transform.parent.localScale.y;
+        return Physics2D.Raycast(transform.position, Vector2.down, scaledDistance, jumpableGround);
     }
+
 
     private void OnDrawGizmos()
     {
-        Gizmos.DrawRay(transform.position, Vector2.down * distance);
         Gizmos.color = Color.red;
+        float scaledDistance = distance * transform.parent.localScale.y;
+        Gizmos.DrawRay(transform.position, Vector2.down * scaledDistance);
     }
 }
 

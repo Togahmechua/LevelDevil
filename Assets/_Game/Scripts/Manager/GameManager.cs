@@ -32,7 +32,7 @@ public class GameManager : Singleton<GameManager>
 
         //ChangeState(GameState.MainMenu);
 
-        //UIManager.Ins.OpenUI<StartScene>();
+        UIManager.Ins.OpenUI<StartScene>();
     }
 
     //public static void ChangeState(GameState state)

@@ -1462,8 +1462,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f63306ff94d8c046aba6626b055a153, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  box: {fileID: 0}
-  listObj: []
+  box: {fileID: 3085201154069736946}
+  listObj:
+  - obj: {fileID: 2613237054853262484}
+    delayTime: 0
   etype: 0
 --- !u!1 &3728536442991566315
 GameObject:
@@ -2578,8 +2580,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveActions:
   - movePos: {fileID: 2158765477010522718}
-    speed: 8
-    duration: 0
+    speed: 3
+    duration: 1
   box: {fileID: 0}
   movingObj: {fileID: 2419265116459716915}
   eDeactiveBox: 0
@@ -6150,7 +6152,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1395923971887104170, guid: b7039f2f3f344474facab177e974eaae, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4270677515770949882, guid: b7039f2f3f344474facab177e974eaae, type: 3}
       propertyPath: m_LocalScale.x
