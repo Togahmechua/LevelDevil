@@ -37,6 +37,7 @@ public class LevelManager : MonoBehaviour
             {
                /* mapScr = Instantiate(mapList[curMap], transform);*/
                 mapScr = SimplePool.Spawn<Map>(mapList[id]);
+                mapScr.ResetState();
                 curMaplList.Add(mapScr);
             }
         }
@@ -48,6 +49,7 @@ public class LevelManager : MonoBehaviour
         {
             foreach (Map map in curMaplList)
             {
+                mapScr.ResetState();
                 SimplePool.Despawn(map);
             }
             curMaplList.Clear();

@@ -4759,7 +4759,7 @@ MonoBehaviour:
   img: {fileID: 3751875798163317794}
   effect: {fileID: 4370292795458723977}
   id: 9
-  color: {r: 0, g: 0, b: 0, a: 0}
+  color: {r: 0.95686275, g: 0.54509807, b: 0.4862745, a: 1}
 --- !u!1 &6783257298648327028
 GameObject:
   m_ObjectHideFlags: 0
