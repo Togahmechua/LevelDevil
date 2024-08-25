@@ -7,7 +7,8 @@ public class SetActiveGOBJ : MonoBehaviour
 {
     [SerializeField] private BoxCollider2D box;
     [SerializeField] private List<ObjList> listObj;
-    [SerializeField] private EActiveType etype;
+    [SerializeField] private ESetActiveType etype;
+    [SerializeField] private EDeActiveBox eDeActiveBox;
 
     [Serializable]
     public class ObjList
@@ -29,21 +30,37 @@ public class SetActiveGOBJ : MonoBehaviour
     {
         switch (etype)
         {
-            case EActiveType.Active:
+            case ESetActiveType.Active:
                 foreach (ObjList item in listObj)
                 {
                     yield return new WaitForSeconds(item.delayTime);
                     item.obj.SetActive(true);
                 }
-                box.enabled = false;
+
+                if (eDeActiveBox == EDeActiveBox.DeActive)
+                {  
+                    box.enabled = false;
+                }
+                else if (eDeActiveBox == EDeActiveBox.Active)
+                {
+                    box.enabled = true;
+                }
                 break;
-            case EActiveType.DeActive:
+            case ESetActiveType.DeActive:
                 foreach (ObjList item in listObj)
                 {
                     yield return new WaitForSeconds(item.delayTime);
                     item.obj.SetActive(false);
                 }
-                box.enabled = false;
+
+                if (eDeActiveBox == EDeActiveBox.DeActive)
+                {
+                    box.enabled = false;
+                }
+                else if (eDeActiveBox == EDeActiveBox.Active)
+                {
+                    box.enabled = true;
+                }
                 break;
         }
         
@@ -51,8 +68,9 @@ public class SetActiveGOBJ : MonoBehaviour
 }
 
 
-public enum EActiveType
+public enum ESetActiveType
 {
     Active = 0,
     DeActive = 1
 }
+

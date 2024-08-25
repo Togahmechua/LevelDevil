@@ -49,5 +49,6 @@ public class MovingPlat : MonoBehaviour
 public enum EMove
 {
     NormalMove = 0,
-    LocalMove = 1
+    LocalMove = 1,
+    StepByStepMove = 2
 }
