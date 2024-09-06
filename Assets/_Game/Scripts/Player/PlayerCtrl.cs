@@ -8,10 +8,12 @@ using EZCameraShake;
 public class PlayerCtrl : DestroyOBJ
 {
     public PlayerMovement playerMovement;
-
     private void Start()
     {
-        newOnInit();
+        if (playerMovement != null)
+        {
+            newOnInit();
+        }
     }
 
     private void Update()

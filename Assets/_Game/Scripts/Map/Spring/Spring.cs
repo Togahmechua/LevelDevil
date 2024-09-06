@@ -12,7 +12,10 @@ public class Spring : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            anim.SetTrigger(CacheString.TAG_SPRING);
+            if (anim != null)
+            {
+                anim.SetTrigger(CacheString.TAG_SPRING);
+            }
             collision.gameObject.GetComponent<Rigidbody2D>().AddForce(Vector2.up * bounce, ForceMode2D.Impulse);
             Observer.Notify("Wait", 0.5f, new Action(()
             => anim.SetTrigger(CacheString.TAG_IDLE)));

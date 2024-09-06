@@ -14,7 +14,11 @@ public class Gate : MonoBehaviour
         {
             other.gameObject.SetActive(false);
             CameraShaker.Instance.ShakeOnce(2f, 2f, 0.1f, 0.1f);
-            anim.SetTrigger(CacheString.TAG_WIN);
+            if (anim != null)
+            {
+                anim.SetTrigger(CacheString.TAG_WIN);
+                Debug.Log("Anim is missing or null");
+            }
         }
     }
 }

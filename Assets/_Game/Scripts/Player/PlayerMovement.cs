@@ -11,7 +11,7 @@ public class PlayerMovement : MonoBehaviour
 
     [Header("Movement")]
     public EControlType controlType;
-
+    
     [SerializeField] private float speed;
     public float updateSpeed;
     [SerializeField] private bool canJump = true;
@@ -42,7 +42,10 @@ public class PlayerMovement : MonoBehaviour
     {
         // this.enabled = false;
         this.speed = 0f;
-        anim.SetTrigger(CacheString.TAG_APPEAR);
+        if (anim != null)
+        {
+            anim.SetTrigger(CacheString.TAG_APPEAR);
+        }
         yield return new WaitForSeconds(0.5f);
         // this.enabled = true;
         this.speed = updateSpeed;
@@ -119,7 +122,10 @@ public class PlayerMovement : MonoBehaviour
 
     public void ChangeAnim(string currentAnim, bool isActive)
     {
-        anim.SetBool(currentAnim, isActive);
+        if (anim != null)
+        {
+            anim.SetBool(currentAnim, isActive);
+        }
     }
 
     private bool IsGrounded()
