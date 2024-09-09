@@ -34,15 +34,17 @@ public class StepByStepMover : MonoBehaviour
         {
             isMoving = true;
             StartCoroutine(MoveToPositions());
-
-            switch(eDeactiveBox)
+            if (box != null)
             {
-                case EDeActiveBox.DeActive:
-                    box.enabled = false;
-                    break;
-                case EDeActiveBox.Active:
-                    box.enabled = true;
-                    break;
+                switch (eDeactiveBox)
+                {
+                    case EDeActiveBox.DeActive:
+                        box.enabled = false;
+                        break;
+                    case EDeActiveBox.Active:
+                        box.enabled = true;
+                        break;
+                }
             }
         }
     }

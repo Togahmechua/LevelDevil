@@ -12,6 +12,8 @@ public class GameManager : Singleton<GameManager>
     //private static GameState gameState = GameState.MainMenu;
 
     // Start is called before the first frame update
+    public bool isActive;
+
     protected void Awake()
     {
         DOTween.SetTweensCapacity(500, 50);
@@ -31,8 +33,10 @@ public class GameManager : Singleton<GameManager>
         //userData?.OnInitData();
 
         //ChangeState(GameState.MainMenu);
-
-        //UIManager.Ins.OpenUI<StartScene>();
+        if (isActive)
+        {
+            UIManager.Ins.OpenUI<StartScene>();
+        }
     }
 
     //public static void ChangeState(GameState state)
