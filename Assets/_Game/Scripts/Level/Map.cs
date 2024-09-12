@@ -18,16 +18,19 @@ public class Map : GameUnit
         if (CurLevel >= levelList.Count && !win)
         {
             CurLevel = levelList.Count;
+            //Debug.Log("A");
             // So sánh và cập nhật trạng thái thắng của map
             if (eLevl == LevelManager.Ins.mapSO.mapList[LevelManager.Ins.curMap].eLevel &&
                 LevelManager.Ins.mapSO.mapList[LevelManager.Ins.curMap].isWon == false)
             {
+                //Debug.Log("B");
                 LevelManager.Ins.mapSO.mapList[LevelManager.Ins.curMap].isWon = true;
                 SaveWinState(LevelManager.Ins.curMap);
                 Debug.Log("Map " + LevelManager.Ins.curMap + " is won.");
                 LevelManager.Ins.curMap++;
             }
             win = true;
+            //Debug.Log("C");
             Observer.Notify("Wait", 1f, new Action(WaitDoorAnim));
         }
     }

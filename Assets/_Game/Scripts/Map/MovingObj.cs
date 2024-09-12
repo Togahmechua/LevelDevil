@@ -12,6 +12,25 @@ public class MovingObj : MonoBehaviour
     [SerializeField] private bool isTouching;
     [SerializeField] private EMovingOBJType EMovingOBJType;
     [SerializeField] private EBox EBox;
+    [SerializeField] private ESaw ESaw;
+
+    private Saw saw;
+
+    private void Start()
+    {
+        if (gameObj != null)
+        {
+            saw = gameObj.GetComponentInChildren<Saw>();
+            if (saw != null)
+            {
+                Debug.Log("Saw component found.");
+            }
+            else
+            {
+                Debug.LogWarning("Saw component not found.");
+            }
+        }
+    }
 
     private void Update()
     {
@@ -54,7 +73,29 @@ public class MovingObj : MonoBehaviour
                     isTouching = true;
                     break;
             }
-            
+
+            switch (ESaw)
+            {
+                case ESaw.ActiveSaw:
+                    if (saw != null)
+                    {
+                        saw.isAbleToMove = false;
+                    }
+                    break;
+                case ESaw.DeActiveSaw:
+                    if (saw != null)
+                    {
+                        Sequence mySequence = DOTween.Sequence();
+                        mySequence.AppendInterval(0.5f);
+                        mySequence.AppendCallback(() =>
+                        {
+                            saw.isAbleToMove = true;
+                            gameObj.DOMove(movePos.position, duration);
+                        });
+                        mySequence.Play();
+                    }
+                    break;
+            }
 
             switch (EMovingOBJType)
             {
@@ -64,7 +105,7 @@ public class MovingObj : MonoBehaviour
                 case EMovingOBJType.MovingGameObj:
                     gameObj.DOMove(movePos.position, duration);
                     break;
-            }
+            }     
         }
     }
 }
@@ -79,4 +120,10 @@ public enum EBox
 {
    BoxEnableFalse = 0,
    BoxEnableTrue = 1
+}
+
+public enum ESaw
+{
+    ActiveSaw = 0,
+    DeActiveSaw = 1
 }

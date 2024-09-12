@@ -34,6 +34,7 @@ public class ScaleButton : MonoBehaviour
         }
     }
 
+
     private void SetPlayerDetails(float playerSpeed, float playerJumpForce)
     {
         if (playerCtrl != null)

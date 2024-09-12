@@ -1560,7 +1560,7 @@ MonoBehaviour:
   img: {fileID: 2409419749566672175}
   effect: {fileID: 5761344027695086669}
   id: 11
-  color: {r: 0, g: 0, b: 0, a: 0}
+  color: {r: 0.95686275, g: 0.61960787, b: 0.4862745, a: 0}
 --- !u!1 &2127309336974555507
 GameObject:
   m_ObjectHideFlags: 0
