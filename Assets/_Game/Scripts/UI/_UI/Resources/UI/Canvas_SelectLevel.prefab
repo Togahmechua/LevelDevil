@@ -6144,4 +6144,4 @@ MonoBehaviour:
   img: {fileID: 8588235927703976109}
   effect: {fileID: 300714760654158130}
   id: 12
-  color: {r: 0, g: 0, b: 0, a: 0}
+  color: {r: 0.91764706, g: 0.47058824, b: 0.31764707, a: 0}

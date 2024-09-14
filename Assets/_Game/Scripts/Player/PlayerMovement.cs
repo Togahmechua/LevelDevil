@@ -6,7 +6,9 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    [Header("Movement")]
+    [SerializeField] private EGravityType gravityType;
+
+    [Header("Anim")]
     [SerializeField] private Animator anim;
 
     [Header("Movement")]
@@ -63,7 +65,7 @@ public class PlayerMovement : MonoBehaviour
                 rb.velocity = new Vector2(dirX * speed, rb.velocity.y);
                 if (Mathf.Abs(dirX) > 0.1f)
                 {
-                    model.rotation = Quaternion.Euler(new Vector3(0f, dirX > 0 ? 0f : 180f, 0f));
+                    model.rotation = Quaternion.Euler(new Vector3(rb.gravityScale < 0 ? 180f : 0f, dirX > 0 ? 0f : 180f, 0f));
                 }
                 break;
             case EControlType.SpecialMove:
@@ -71,7 +73,7 @@ public class PlayerMovement : MonoBehaviour
                 rb.velocity = new Vector2(-dirX * speed, rb.velocity.y);
                 if (Mathf.Abs(dirX) > 0.1f)
                 {
-                    model.rotation = Quaternion.Euler(new Vector3(0f, dirX < 0 ? 0f : 180f, 0f));
+                    model.rotation = Quaternion.Euler(new Vector3(rb.gravityScale < 0 ? 180f : 0f, dirX < 0 ? 0f : 180f, 0f));
                 }
                 break;
         }
@@ -94,6 +96,14 @@ public class PlayerMovement : MonoBehaviour
             ChangeAnim(CacheString.TAG_ISRUNNING, false);
             // isJumping = false;
         }
+
+        if (gravityType == EGravityType.Reverse)
+        {
+            if (rb.velocity.y > 0 && !IsGrounded())
+            {
+                ChangeAnim(CacheString.TAG_ISRUNNING, true);
+            }
+        }
     }
 
     public void ChangeMoveType()
@@ -112,11 +122,20 @@ public class PlayerMovement : MonoBehaviour
 
     public void Jump()
     {
-        if (IsGrounded())
+        if (gravityType == EGravityType.None)
         {
-            rb.velocity = new Vector2(rb.velocity.x, JumpForce);
-            ChangeAnim(CacheString.TAG_ISRUNNING, true);
-            // isJumping = true;
+            if (IsGrounded())
+            {
+                rb.velocity = new Vector2(rb.velocity.x, JumpForce);
+                ChangeAnim(CacheString.TAG_ISRUNNING, true);
+                // isJumping = true;
+            }
+        }
+        else if (gravityType == EGravityType.Reverse)
+        {
+            rb.gravityScale = rb.gravityScale * (-1f);
+            //Debug.Log(rb.gravityScale);
+            model.rotation = Quaternion.Euler(new Vector3(rb.gravityScale < 0 ? 180f : 0f, 0f, 0f));
         }
     }
 
@@ -132,7 +151,7 @@ public class PlayerMovement : MonoBehaviour
     {
         //tinh khoang cach theo scale
         float scaledDistance = distance * transform.parent.localScale.y;
-        return Physics2D.Raycast(transform.position, Vector2.down, scaledDistance, jumpableGround);
+        return Physics2D.Raycast(transform.position, rb.gravityScale > 0 ? Vector2.down : Vector2.up, scaledDistance, jumpableGround);
     }
 
 
@@ -140,7 +159,8 @@ public class PlayerMovement : MonoBehaviour
     {
         Gizmos.color = Color.red;
         float scaledDistance = distance * transform.parent.localScale.y;
-        Gizmos.DrawRay(transform.position, Vector2.down * scaledDistance);
+        Vector2 rayDirection = rb.gravityScale > 0 ? Vector2.down : Vector2.up;
+        Gizmos.DrawRay(transform.position, rayDirection * scaledDistance);
     }
 }
 
@@ -148,4 +168,10 @@ public enum EControlType
 {
     NormalMove = 0,
     SpecialMove = 1
+}
+
+public enum EGravityType
+{
+    None = 0,
+    Reverse = 1
 }
