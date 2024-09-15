@@ -6,13 +6,13 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    [Header("Movement")]
+    public EControlType controlType;
     [SerializeField] private EGravityType gravityType;
+    [SerializeField] private EMovementType movementType;
 
     [Header("Anim")]
     [SerializeField] private Animator anim;
-
-    [Header("Movement")]
-    public EControlType controlType;
     
     [SerializeField] private float speed;
     public float updateSpeed;
@@ -33,6 +33,8 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         Move(controlType);
+
+        this.speed = updateSpeed;
     }
 
     public void OnInit()
@@ -62,7 +64,11 @@ public class PlayerMovement : MonoBehaviour
         {
             case EControlType.NormalMove:
                 //Di chuyen bthg
-                rb.velocity = new Vector2(dirX * speed, rb.velocity.y);
+                if (movementType == EMovementType.None)
+                {
+                    rb.velocity = new Vector2(dirX * speed, rb.velocity.y);
+                }
+                
                 if (Mathf.Abs(dirX) > 0.1f)
                 {
                     model.rotation = Quaternion.Euler(new Vector3(rb.gravityScale < 0 ? 180f : 0f, dirX > 0 ? 0f : 180f, 0f));
@@ -126,7 +132,11 @@ public class PlayerMovement : MonoBehaviour
         {
             if (IsGrounded())
             {
-                rb.velocity = new Vector2(rb.velocity.x, JumpForce);
+                if (movementType == EMovementType.None)
+                {
+                    rb.velocity = new Vector2(rb.velocity.x, JumpForce);
+                }
+
                 ChangeAnim(CacheString.TAG_ISRUNNING, true);
                 // isJumping = true;
             }
@@ -174,4 +184,10 @@ public enum EGravityType
 {
     None = 0,
     Reverse = 1
+}
+
+public enum EMovementType
+{
+    None = 0,
+    ConveyorBelt = 1
 }
