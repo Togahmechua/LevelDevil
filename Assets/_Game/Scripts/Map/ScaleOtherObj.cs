@@ -10,6 +10,7 @@ public class ScaleOtherObj : MonoBehaviour
     [SerializeField] private BoxCollider2D box;
     [SerializeField] private Saw saw;
     [SerializeField] private float delay;
+    [SerializeField] private EScaleType scaleType;
 
     [Serializable]
     public class OtherObjDetails
@@ -35,7 +36,12 @@ public class ScaleOtherObj : MonoBehaviour
             {
                 saw.transform.DOScale(otherObjDetails[currentIndex].scaleOther, otherObjDetails[currentIndex].duration).OnComplete(() =>
                 {
-                    
+                    if (scaleType == EScaleType.Special)
+                    {
+                        saw.isAbleToMove = false;
+                        saw.ResumeMovement();
+                        return;
+                    }
                     saw.transform.DOMove(otherObjDetails[currentIndex].waypoints, otherObjDetails[currentIndex].durationToChangeWP).OnComplete(() =>
                     {
                         if (Vector2.Distance(saw.transform.position, otherObjDetails[currentIndex].waypoints) < 0.1f)
@@ -67,4 +73,10 @@ public class ScaleOtherObj : MonoBehaviour
             ScaleOther();
         }
     }
+}
+
+public enum EScaleType
+{
+    Normal = 0,
+    Special = 1
 }
