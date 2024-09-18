@@ -392,6 +392,8 @@ MonoBehaviour:
   child: {fileID: 3963291575517791344}
   count: 0
   max: 1
+  rb: {fileID: 0}
+  player: {fileID: 0}
 --- !u!114 &5945319315073826891
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -409,6 +411,7 @@ MonoBehaviour:
   - obj: {fileID: 5127170538714986777}
     delayTime: 0
   etype: 1
+  eDeActiveBox: 0
 --- !u!114 &3067995770314283064
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -426,8 +429,9 @@ MonoBehaviour:
   - obj: {fileID: 953897115588146769}
     delayTime: 0
   - obj: {fileID: 3618342193562952693}
-    delayTime: 0.5
+    delayTime: 2
   etype: 0
+  eDeActiveBox: 0
 --- !u!1 &1173301764314369208
 GameObject:
   m_ObjectHideFlags: 0
@@ -935,6 +939,8 @@ MonoBehaviour:
   child: {fileID: 8975573879211640924}
   count: 0
   max: 1
+  rb: {fileID: 0}
+  player: {fileID: 0}
 --- !u!114 &4922639790231375635
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -952,6 +958,7 @@ MonoBehaviour:
   - obj: {fileID: 3135650186996712319}
     delayTime: 0
   etype: 1
+  eDeActiveBox: 0
 --- !u!114 &7808824244359326436
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -969,8 +976,9 @@ MonoBehaviour:
   - obj: {fileID: 3552423551751331216}
     delayTime: 0
   - obj: {fileID: 7027601525550009491}
-    delayTime: 0.5
+    delayTime: 2
   etype: 0
+  eDeActiveBox: 0
 --- !u!1 &3005801983525418813
 GameObject:
   m_ObjectHideFlags: 0
@@ -1865,8 +1873,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73ca87660d3653347bbf93927a4a167f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  anim: {fileID: 8902805541521698156}
   controlType: 0
+  gravityType: 0
+  movementType: 0
+  anim: {fileID: 8902805541521698156}
   speed: 0
   updateSpeed: 3
   canJump: 1
@@ -2171,6 +2181,8 @@ MonoBehaviour:
   child: {fileID: 7505722736534918172}
   count: 0
   max: 1
+  rb: {fileID: 0}
+  player: {fileID: 0}
 --- !u!114 &2906867817720670574
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2188,6 +2200,7 @@ MonoBehaviour:
   - obj: {fileID: 3646964733617456081}
     delayTime: 0
   etype: 1
+  eDeActiveBox: 0
 --- !u!114 &5366070337187896840
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2205,8 +2218,9 @@ MonoBehaviour:
   - obj: {fileID: 4851121713926645461}
     delayTime: 0
   - obj: {fileID: 7529784577391299648}
-    delayTime: 0.52
+    delayTime: 2.2
   etype: 0
+  eDeActiveBox: 0
 --- !u!1 &4851121713926645461
 GameObject:
   m_ObjectHideFlags: 0
@@ -2696,6 +2710,7 @@ MonoBehaviour:
   isTouching: 0
   EMovingOBJType: 1
   EBox: 0
+  ESaw: 0
 --- !u!114 &5146389514165676150
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2713,6 +2728,7 @@ MonoBehaviour:
   - obj: {fileID: 4851121713926645461}
     delayTime: 0
   etype: 1
+  eDeActiveBox: 0
 --- !u!1 &6355322813353202236
 GameObject:
   m_ObjectHideFlags: 0
@@ -3413,6 +3429,7 @@ MonoBehaviour:
   isTouching: 0
   EMovingOBJType: 0
   EBox: 0
+  ESaw: 0
 --- !u!114 &6961909739348548900
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3430,6 +3447,7 @@ MonoBehaviour:
   - obj: {fileID: 2612203986963742501}
     delayTime: 1.5
   etype: 0
+  eDeActiveBox: 0
 --- !u!1 &7708669082553393199
 GameObject:
   m_ObjectHideFlags: 0
@@ -3782,6 +3800,8 @@ MonoBehaviour:
   child: {fileID: 5889084489170807723}
   count: 0
   max: 1
+  rb: {fileID: 0}
+  player: {fileID: 0}
 --- !u!114 &6537767665508740544
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3799,6 +3819,7 @@ MonoBehaviour:
   - obj: {fileID: 4137581990057400743}
     delayTime: 0
   etype: 1
+  eDeActiveBox: 0
 --- !u!114 &4813290123685553525
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3816,8 +3837,9 @@ MonoBehaviour:
   - obj: {fileID: 3471776287683730749}
     delayTime: 0
   - obj: {fileID: 400073869145013552}
-    delayTime: 0.5
+    delayTime: 2
   etype: 0
+  eDeActiveBox: 0
 --- !u!1 &8448319050017894835
 GameObject:
   m_ObjectHideFlags: 0
@@ -4236,6 +4258,8 @@ MonoBehaviour:
   child: {fileID: 6331962517550687781}
   count: 0
   max: 1
+  rb: {fileID: 0}
+  player: {fileID: 0}
 --- !u!114 &782218632509051068
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4253,6 +4277,7 @@ MonoBehaviour:
   - obj: {fileID: 8646773561100391370}
     delayTime: 0
   etype: 1
+  eDeActiveBox: 0
 --- !u!114 &5029113877554038271
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4270,8 +4295,9 @@ MonoBehaviour:
   - obj: {fileID: 4601930089741200902}
     delayTime: 0
   - obj: {fileID: 7276160244512854607}
-    delayTime: 0.5
+    delayTime: 2
   etype: 0
+  eDeActiveBox: 0
 --- !u!1001 &281159986730601923
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -42,6 +42,10 @@ MonoBehaviour:
   - eLevel: 14
     isWon: 1
   - eLevel: 15
-    isWon: 0
+    isWon: 1
   - eLevel: 16
+    isWon: 1
+  - eLevel: 17
+    isWon: 0
+  - eLevel: 18
     isWon: 0

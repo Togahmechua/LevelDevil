@@ -1,4 +1,5 @@
 using DG.Tweening;
+using EZCameraShake;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -17,7 +18,14 @@ public class ScaleButton : MonoBehaviour
     [Header("Player Config")]
     [SerializeField] private float speed;
     [SerializeField] private float jumpForce;
-    
+
+    [Header("BtnType")]
+    [SerializeField] private EShakeBtn shakeBtnType;
+    [SerializeField] private float magnitude, roughness, fadeInTime;
+    [SerializeField] private float delay;
+    private CameraShakeInstance shakeInstance;
+
+
     private void ScalePlayer()
     {
         if (playerCtrl != null)
@@ -54,6 +62,33 @@ public class ScaleButton : MonoBehaviour
             btnSprite.sprite = spr;
             ScalePlayer();
             SetPlayerDetails(speed, jumpForce);
+
+            if (shakeBtnType == EShakeBtn.Special)
+            {
+                StopCameraShake(); // Stop current shake before starting a new one
+
+                Sequence mySequence = DOTween.Sequence();
+                mySequence.AppendCallback(() =>
+                {
+                    // Start a new camera shake
+                    shakeInstance = CameraShaker.Instance.StartShake(magnitude, roughness, fadeInTime);
+                });
+                mySequence.AppendInterval(delay);
+                mySequence.AppendCallback(() =>
+                {
+                    StopCameraShake();
+                });
+                mySequence.Play();
+            }
+        }
+    }
+
+    public void StopCameraShake()
+    {
+        if (shakeInstance != null)
+        {
+            shakeInstance.CancelShake();
+            shakeInstance = null;
         }
     }
 }
@@ -62,4 +97,10 @@ public enum EScale
 {
     Bigger = 0,
     Smaller = 1
+}
+
+public enum EShakeBtn
+{
+    Normal = 0,
+    Special = 1
 }

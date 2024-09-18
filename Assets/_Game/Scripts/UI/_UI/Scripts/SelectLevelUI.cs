@@ -20,5 +20,10 @@ public class SelectLevelUI : UICanvas
         {
             listGOBJ[i].gameObject.SetActive(true);
         }
+
+        if (gateNum == listGOBJ.Length - 1)
+        {
+            listGOBJ[listGOBJ.Length-1].gameObject.SetActive(true);
+        }
     }
 }

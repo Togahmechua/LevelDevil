@@ -151,6 +151,18 @@ namespace EZCameraShake
         }
 
         /// <summary>
+        /// Cancel shake.
+        /// </summary>
+        public void CancelShake()
+        {
+            // Dừng ngay lập tức bằng cách thiết lập các giá trị quan trọng về 0
+            Magnitude = 0;
+            Roughness = 0;
+            currentFadeTime = 0;
+            sustain = false;
+        }
+
+        /// <summary>
         /// A normalized value (about 0 to about 1) that represents the current level of intensity.
         /// </summary>
         public float NormalizedFadeTime

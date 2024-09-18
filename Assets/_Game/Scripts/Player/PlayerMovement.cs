@@ -12,7 +12,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private EMovementType movementType;
 
     [Header("Anim")]
-    [SerializeField] private Animator anim;
+    public Animator anim;
     
     [SerializeField] private float speed;
     public float updateSpeed;

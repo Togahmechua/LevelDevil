@@ -151,6 +151,8 @@ MonoBehaviour:
   child: {fileID: 3817970417636668289}
   count: 0
   max: 1
+  rb: {fileID: 0}
+  player: {fileID: 0}
 --- !u!114 &2489748072679388477
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -170,6 +172,7 @@ MonoBehaviour:
   isTouching: 0
   EMovingOBJType: 1
   EBox: 0
+  ESaw: 0
 --- !u!114 &2720390081706264237
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -185,8 +188,9 @@ MonoBehaviour:
   box: {fileID: 3462177055774808600}
   listObj:
   - obj: {fileID: 6105034873902636241}
-    delayTime: 0
+    delayTime: 2
   etype: 1
+  eDeActiveBox: 0
 --- !u!1 &898979686258657277
 GameObject:
   m_ObjectHideFlags: 0
@@ -587,6 +591,8 @@ MonoBehaviour:
   child: {fileID: 4516143919823770760}
   count: 0
   max: 1
+  rb: {fileID: 0}
+  player: {fileID: 0}
 --- !u!114 &6144346539274487701
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -606,6 +612,7 @@ MonoBehaviour:
   isTouching: 0
   EMovingOBJType: 1
   EBox: 0
+  ESaw: 0
 --- !u!114 &2538722004857285750
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -621,8 +628,9 @@ MonoBehaviour:
   box: {fileID: 740675813957496364}
   listObj:
   - obj: {fileID: 3953025787170850758}
-    delayTime: 0
+    delayTime: 2
   etype: 1
+  eDeActiveBox: 0
 --- !u!1 &3051146947639669644
 GameObject:
   m_ObjectHideFlags: 0
@@ -786,6 +794,7 @@ MonoBehaviour:
   isTouching: 0
   EMovingOBJType: 1
   EBox: 0
+  ESaw: 0
 --- !u!1 &5108607752067624322
 GameObject:
   m_ObjectHideFlags: 0
@@ -1391,6 +1400,7 @@ MonoBehaviour:
   isTouching: 0
   EMovingOBJType: 1
   EBox: 0
+  ESaw: 0
 --- !u!1 &7442123114189363438
 GameObject:
   m_ObjectHideFlags: 0
@@ -1522,6 +1532,8 @@ MonoBehaviour:
   child: {fileID: 2878183905658710851}
   count: 0
   max: 1
+  rb: {fileID: 0}
+  player: {fileID: 0}
 --- !u!114 &6320917749422853085
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1539,8 +1551,9 @@ MonoBehaviour:
   - obj: {fileID: 8148228887263927962}
     delayTime: 0
   - obj: {fileID: 7442123114189363438}
-    delayTime: 0
+    delayTime: 2
   etype: 1
+  eDeActiveBox: 0
 --- !u!1 &8148228887263927962
 GameObject:
   m_ObjectHideFlags: 0
@@ -1776,6 +1789,8 @@ MonoBehaviour:
   child: {fileID: 3334582922936420768}
   count: 0
   max: 1
+  rb: {fileID: 0}
+  player: {fileID: 0}
 --- !u!1 &9080594458463640356
 GameObject:
   m_ObjectHideFlags: 0
@@ -5358,8 +5373,9 @@ MonoBehaviour:
   box: {fileID: 740675813957496364}
   listObj:
   - obj: {fileID: 376378800542483527}
-    delayTime: 0
+    delayTime: 2
   etype: 1
+  eDeActiveBox: 0
 --- !u!4 &4056845628143038015 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7261054369206555734, guid: b6cc9b00e46186d4b8624b585e5d4acc, type: 3}
@@ -5577,11 +5593,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6089776821831822125, guid: 1a8710c1c6825e34a8c8e35528b70d82, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -8.31
+      value: -8.38
       objectReference: {fileID: 0}
     - target: {fileID: 6089776821831822125, guid: 1a8710c1c6825e34a8c8e35528b70d82, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.359
+      value: 2.38
       objectReference: {fileID: 0}
     - target: {fileID: 6089776821831822125, guid: 1a8710c1c6825e34a8c8e35528b70d82, type: 3}
       propertyPath: m_LocalPosition.z

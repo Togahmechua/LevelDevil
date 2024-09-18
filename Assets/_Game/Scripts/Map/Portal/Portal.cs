@@ -1,3 +1,4 @@
+﻿using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -9,6 +10,8 @@ public class Portal : MonoBehaviour
     [SerializeField] private Transform child;
     [SerializeField] private int count;
     [SerializeField] private int max;
+    [SerializeField] private Rigidbody2D rb;
+    [SerializeField] private PlayerCtrl player;
 
     private void Start()
     {
@@ -19,26 +22,62 @@ public class Portal : MonoBehaviour
         }
     }
 
-    private void Update()
-    {
-        if (count >= max)
-        {
-            boxCollider.enabled = false;
-        }
-    }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        PlayerCtrl player = Cache.GetCharacter(other);
-        if (player != null )
+        PlayerCtrl playerCtrl = Cache.GetCharacter(other);
+        if (playerCtrl != null )
         {
-            player.transform.position = telePosList[count].position;
+            rb = playerCtrl.GetComponent<Rigidbody2D>();
+            player = playerCtrl;
 
-            count++;
+            StartCoroutine(PortalIn());
+            
+
+            if (count >= max)
+            {
+                boxCollider.enabled = false;
+            }
         }
     }
 
-    private void OnDrawGizmosSelected()
+    private IEnumerator PortalIn()
+    {
+        if (count >= telePosList.Count)
+        {
+            Debug.LogWarning("No more teleport positions available.");
+            yield break;
+        }
+
+        rb.simulated = false;
+        player.playerMovement.anim.SetTrigger(CacheString.TAG_PORTALIN);
+        yield return StartCoroutine(MoveInPortal());
+        yield return new WaitForSeconds(0.5f);
+
+        player.transform.position = telePosList[count].position;
+        count++;
+        player.playerMovement.anim.SetTrigger(CacheString.TAG_PORTALOUT);
+        yield return new WaitForSeconds(0.5f);
+        rb.simulated = true;
+    }
+
+    private IEnumerator MoveInPortal()
+    {
+        float timer = 0;
+        Vector2 targetPos = telePosList[count].position;
+
+        while (timer < 0.5f)
+        {
+            player.transform.position = Vector2.MoveTowards(player.transform.position, targetPos, 3 * Time.deltaTime);
+            yield return null;
+            timer += Time.deltaTime;
+
+            if (Vector2.Distance(player.transform.position, targetPos) < 0.1f)
+                break;
+        }
+    }
+
+/*    private void OnDrawGizmosSelected()
     {
         telePosList.Clear();
         for (int i = 0; i < child.childCount; i++)
@@ -48,5 +87,5 @@ public class Portal : MonoBehaviour
 
         max = telePosList.Count;
         Debug.Log(max);
-    }
+    }*/
 }

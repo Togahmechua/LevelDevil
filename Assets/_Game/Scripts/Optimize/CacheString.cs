@@ -10,4 +10,6 @@ public class CacheString : MonoBehaviour
     public static string TAG_GROUND = "Ground";
     public static string TAG_SPRING = "Spring";
     public static string TAG_IDLE = "Idle";
+    public static string TAG_PORTALIN = "PortalIn";
+    public static string TAG_PORTALOUT = "PortalOut";
 }
