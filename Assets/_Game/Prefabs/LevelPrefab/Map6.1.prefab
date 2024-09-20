@@ -435,7 +435,7 @@ Rigidbody2D:
     m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!114 &5228246599678187714
 MonoBehaviour:
@@ -825,10 +825,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5531796460bc22245baa54c4062090b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameObj: {fileID: 0}
   movePos: {fileID: 5641142217471638784}
   duration: 8
   box: {fileID: 5316840978721137838}
   isTouching: 0
+  EMovingOBJType: 0
+  EBox: 0
+  ESaw: 0
 --- !u!61 &5316840978721137838
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -918,8 +922,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73ca87660d3653347bbf93927a4a167f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  anim: {fileID: 6186301638515172389}
   controlType: 0
+  gravityType: 0
+  movementType: 0
+  anim: {fileID: 6186301638515172389}
   speed: 0
   updateSpeed: 4
   canJump: 1
@@ -1147,6 +1153,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deadZone: -10
   isDed: 0
+  movingObj: {fileID: 0}
   speed: 8
   duration: 1
   direction: 1
@@ -2201,6 +2208,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deadZone: -10
   isDed: 0
+  movingObj: {fileID: 0}
   speed: 8
   duration: 1
   direction: 1

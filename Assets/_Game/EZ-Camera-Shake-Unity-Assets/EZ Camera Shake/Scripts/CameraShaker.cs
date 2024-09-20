@@ -150,6 +150,17 @@ namespace EZCameraShake
             return shake;
         }
 
+
+        public void StopAllShaking()
+        {
+            foreach (CameraShakeInstance shakeInstance in cameraShakeInstances)
+            {
+                shakeInstance.StartFadeOut(0.1f); // Fade out all shakes quickly
+            }
+
+            cameraShakeInstances.Clear(); // Clear the list of shakes
+        }
+
         /// <summary>
         /// Start shaking the camera.
         /// </summary>

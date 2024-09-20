@@ -1931,8 +1931,8 @@ MonoBehaviour:
   btnSprite: {fileID: 5801166550229675547}
   spr: {fileID: -2019636117, guid: 0efb0bf0425483c408349a93ab7e56f5, type: 3}
   box: {fileID: 1312480866523545674}
-  flappyMovement: {fileID: 0}
-  model: {fileID: 0}
+  flappyMovement: {fileID: 8321457718093857992}
+  model: {fileID: 2997454619467832190}
   speed: -3
 --- !u!1 &2166517913658529774
 GameObject:
@@ -3001,7 +3001,7 @@ Rigidbody2D:
     m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!114 &5613443187727053654
 MonoBehaviour:
@@ -3379,8 +3379,8 @@ MonoBehaviour:
   btnSprite: {fileID: 1568764811350150966}
   spr: {fileID: -2019636117, guid: 0efb0bf0425483c408349a93ab7e56f5, type: 3}
   box: {fileID: 4542257718090373313}
-  flappyMovement: {fileID: 0}
-  model: {fileID: 0}
+  flappyMovement: {fileID: 8321457718093857992}
+  model: {fileID: 2997454619467832190}
   speed: -3
 --- !u!114 &8041747333019877429
 MonoBehaviour:
@@ -3807,8 +3807,8 @@ MonoBehaviour:
   btnSprite: {fileID: 7805991267564612132}
   spr: {fileID: -2019636117, guid: 0efb0bf0425483c408349a93ab7e56f5, type: 3}
   box: {fileID: 4539489863998646265}
-  flappyMovement: {fileID: 0}
-  model: {fileID: 0}
+  flappyMovement: {fileID: 8321457718093857992}
+  model: {fileID: 2997454619467832190}
   speed: -3
 --- !u!114 &3277853541142016980
 MonoBehaviour:
@@ -3975,8 +3975,8 @@ MonoBehaviour:
   btnSprite: {fileID: 1030361768129981947}
   spr: {fileID: -2019636117, guid: 0efb0bf0425483c408349a93ab7e56f5, type: 3}
   box: {fileID: 7544677066563649366}
-  flappyMovement: {fileID: 0}
-  model: {fileID: 0}
+  flappyMovement: {fileID: 8321457718093857992}
+  model: {fileID: 2997454619467832190}
   speed: 3
 --- !u!114 &2815708411483150618
 MonoBehaviour:
@@ -4552,8 +4552,8 @@ MonoBehaviour:
   btnSprite: {fileID: 678898510064589235}
   spr: {fileID: -2019636117, guid: 0efb0bf0425483c408349a93ab7e56f5, type: 3}
   box: {fileID: 3913092921241176348}
-  flappyMovement: {fileID: 0}
-  model: {fileID: 0}
+  flappyMovement: {fileID: 8321457718093857992}
+  model: {fileID: 2997454619467832190}
   speed: 3
 --- !u!1 &5600568076656884948
 GameObject:
@@ -4962,8 +4962,8 @@ MonoBehaviour:
   btnSprite: {fileID: 8398122976138586676}
   spr: {fileID: -2019636117, guid: 0efb0bf0425483c408349a93ab7e56f5, type: 3}
   box: {fileID: 8098898180893685166}
-  flappyMovement: {fileID: 0}
-  model: {fileID: 0}
+  flappyMovement: {fileID: 8321457718093857992}
+  model: {fileID: 2997454619467832190}
   speed: -3
 --- !u!114 &6507570668241863465
 MonoBehaviour:
@@ -5833,8 +5833,8 @@ MonoBehaviour:
   btnSprite: {fileID: 8251634887191754038}
   spr: {fileID: -2019636117, guid: 0efb0bf0425483c408349a93ab7e56f5, type: 3}
   box: {fileID: 4117408625820881419}
-  flappyMovement: {fileID: 0}
-  model: {fileID: 0}
+  flappyMovement: {fileID: 8321457718093857992}
+  model: {fileID: 2997454619467832190}
   speed: 3
 --- !u!114 &8953658484537222141
 MonoBehaviour:

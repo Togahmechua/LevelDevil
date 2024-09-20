@@ -202,7 +202,7 @@ Rigidbody2D:
     m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!114 &2764503122108952770
 MonoBehaviour:
@@ -427,6 +427,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deadZone: -10
   isDed: 0
+  movingObj: {fileID: 0}
   speed: 8
   duration: 1
   direction: 1
@@ -783,7 +784,7 @@ MonoBehaviour:
   moveActions:
   - movePos: {fileID: 601755028764811660}
     speed: 8
-    duration: 0
+    delayTime: 0
   box: {fileID: 0}
   movingObj: {fileID: 6944338461685592256}
   eDeactiveBox: 0
@@ -1150,7 +1151,7 @@ MonoBehaviour:
   moveActions:
   - movePos: {fileID: 2015090029055216814}
     speed: 8
-    duration: 0
+    delayTime: 0
   box: {fileID: 0}
   movingObj: {fileID: 9050931062774438978}
   eDeactiveBox: 0
@@ -1203,7 +1204,7 @@ MonoBehaviour:
   moveActions:
   - movePos: {fileID: 2015090029055216814}
     speed: 8
-    duration: 0
+    delayTime: 0
   box: {fileID: 0}
   movingObj: {fileID: 1588697924937669190}
   eDeactiveBox: 0
@@ -1342,8 +1343,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73ca87660d3653347bbf93927a4a167f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  anim: {fileID: 1860790062740901657}
   controlType: 0
+  gravityType: 0
+  movementType: 0
+  anim: {fileID: 1860790062740901657}
   speed: 0
   updateSpeed: 5
   canJump: 1
@@ -1647,7 +1650,7 @@ MonoBehaviour:
   moveActions:
   - movePos: {fileID: 6500350121215144838}
     speed: 8
-    duration: 0
+    delayTime: 0
   box: {fileID: 0}
   movingObj: {fileID: 7819054577381711784}
   eDeactiveBox: 0

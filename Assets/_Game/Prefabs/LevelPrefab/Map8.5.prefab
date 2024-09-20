@@ -153,6 +153,7 @@ MonoBehaviour:
   max: 1
   rb: {fileID: 0}
   player: {fileID: 0}
+  isDeactiveBox: 0
 --- !u!114 &2489748072679388477
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -593,6 +594,7 @@ MonoBehaviour:
   max: 1
   rb: {fileID: 0}
   player: {fileID: 0}
+  isDeactiveBox: 0
 --- !u!114 &6144346539274487701
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1534,6 +1536,7 @@ MonoBehaviour:
   max: 1
   rb: {fileID: 0}
   player: {fileID: 0}
+  isDeactiveBox: 0
 --- !u!114 &6320917749422853085
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1791,6 +1794,7 @@ MonoBehaviour:
   max: 1
   rb: {fileID: 0}
   player: {fileID: 0}
+  isDeactiveBox: 0
 --- !u!1 &9080594458463640356
 GameObject:
   m_ObjectHideFlags: 0
@@ -5590,6 +5594,10 @@ PrefabInstance:
     - target: {fileID: 3854574584883830440, guid: 1a8710c1c6825e34a8c8e35528b70d82, type: 3}
       propertyPath: m_GravityScale
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3854574584883830440, guid: 1a8710c1c6825e34a8c8e35528b70d82, type: 3}
+      propertyPath: m_CollisionDetection
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6089776821831822125, guid: 1a8710c1c6825e34a8c8e35528b70d82, type: 3}
       propertyPath: m_LocalPosition.x

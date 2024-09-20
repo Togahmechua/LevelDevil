@@ -563,6 +563,8 @@ MonoBehaviour:
   curMap: 0
   mapSO: {fileID: 11400000, guid: c3b749ed85e8e4c479912a5ea1a59481, type: 2}
   imgBackGround: {fileID: 2026528609}
+  endAnim: 0
+  endShakingScence: 0
 --- !u!1 &389457001
 GameObject:
   m_ObjectHideFlags: 0

@@ -1781,8 +1781,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a7d451b085c7ce4b81b4de3da916fe9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  strength: 10
   speed: 3
+  strength: 10
   maxFallSpeed: -10
   maxRiseSpeed: 5
   rb: {fileID: 8424790067485843988}
@@ -6652,7 +6652,7 @@ Rigidbody2D:
     m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!114 &5268837312391479252
 MonoBehaviour:

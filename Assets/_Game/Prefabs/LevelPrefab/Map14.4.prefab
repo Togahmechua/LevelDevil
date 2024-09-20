@@ -671,7 +671,7 @@ Rigidbody2D:
     m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!114 &3156587553828223636
 MonoBehaviour:
@@ -842,6 +842,7 @@ MonoBehaviour:
   box: {fileID: 842510690975963649}
   saw: {fileID: 2733723210215370954}
   delay: 0
+  scaleType: 0
 --- !u!114 &2256640275421832422
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -882,6 +883,11 @@ MonoBehaviour:
   duration: 1
   speed: 10
   jumpForce: 7.5
+  shakeBtnType: 0
+  magnitude: 0
+  roughness: 0
+  fadeInTime: 0
+  delay: 0
 --- !u!1 &1359669916142470336
 GameObject:
   m_ObjectHideFlags: 0
@@ -1639,6 +1645,7 @@ MonoBehaviour:
   box: {fileID: 751964297202372834}
   saw: {fileID: 2733723210215370954}
   delay: 0
+  scaleType: 0
 --- !u!114 &5906119628934208350
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1659,6 +1666,11 @@ MonoBehaviour:
   duration: 1
   speed: 10
   jumpForce: 7.5
+  shakeBtnType: 0
+  magnitude: 0
+  roughness: 0
+  fadeInTime: 0
+  delay: 0
 --- !u!1 &1752337632807001753
 GameObject:
   m_ObjectHideFlags: 0
@@ -3280,6 +3292,7 @@ MonoBehaviour:
   box: {fileID: 3799697961910879923}
   saw: {fileID: 2733723210215370954}
   delay: 0
+  scaleType: 0
 --- !u!114 &115784573974268714
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3300,6 +3313,11 @@ MonoBehaviour:
   duration: 1
   speed: 10
   jumpForce: 7.5
+  shakeBtnType: 0
+  magnitude: 0
+  roughness: 0
+  fadeInTime: 0
+  delay: 0
 --- !u!1 &3264835992230361393
 GameObject:
   m_ObjectHideFlags: 0
@@ -4268,6 +4286,7 @@ MonoBehaviour:
   box: {fileID: 819500515896558275}
   saw: {fileID: 2733723210215370954}
   delay: 0
+  scaleType: 0
 --- !u!1 &4602631728628805029
 GameObject:
   m_ObjectHideFlags: 0
@@ -5332,6 +5351,7 @@ MonoBehaviour:
   box: {fileID: 2336103327774541817}
   saw: {fileID: 2733723210215370954}
   delay: 0
+  scaleType: 0
 --- !u!114 &2808154723302635838
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5370,6 +5390,11 @@ MonoBehaviour:
   duration: 1
   speed: 10
   jumpForce: 7.5
+  shakeBtnType: 0
+  magnitude: 0
+  roughness: 0
+  fadeInTime: 0
+  delay: 0
 --- !u!1 &6392654611049119546
 GameObject:
   m_ObjectHideFlags: 0

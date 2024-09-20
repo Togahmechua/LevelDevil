@@ -51,7 +51,7 @@ MonoBehaviour:
   moveActions:
   - movePos: {fileID: 4476774875283929917}
     speed: 5
-    duration: 0
+    delayTime: 0
   box: {fileID: 1137048499396324309}
   movingObj: {fileID: 267188233304302531}
   eDeactiveBox: 0
@@ -208,7 +208,7 @@ MonoBehaviour:
   moveActions:
   - movePos: {fileID: 8204684529252488442}
     speed: 5
-    duration: 0
+    delayTime: 0
   box: {fileID: 5267439687381163619}
   movingObj: {fileID: 1733257852683673403}
   eDeactiveBox: 0
@@ -454,7 +454,7 @@ MonoBehaviour:
   moveActions:
   - movePos: {fileID: 6291051400199372252}
     speed: 5
-    duration: 0
+    delayTime: 0
   box: {fileID: 4465812693302052916}
   movingObj: {fileID: 2284733477849575817}
   eDeactiveBox: 0
@@ -1053,7 +1053,7 @@ Rigidbody2D:
     m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!114 &2042849320944733403
 MonoBehaviour:
@@ -1421,7 +1421,7 @@ MonoBehaviour:
   moveActions:
   - movePos: {fileID: 6449504442229417123}
     speed: 5
-    duration: 0
+    delayTime: 0
   box: {fileID: 2835013791552194763}
   movingObj: {fileID: 8930897602183712097}
   eDeactiveBox: 0
@@ -1494,6 +1494,8 @@ MonoBehaviour:
     delayTime: 1
   - obj: {fileID: 6829068975718399481}
     delayTime: 1.5
+  etype: 0
+  eDeActiveBox: 0
 --- !u!1 &6818982526209249929
 GameObject:
   m_ObjectHideFlags: 0
@@ -1625,6 +1627,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deadZone: -10
   isDed: 0
+  movingObj: {fileID: 0}
   speed: 8
   duration: 1
   direction: 1
@@ -1726,7 +1729,7 @@ MonoBehaviour:
   moveActions:
   - movePos: {fileID: 5621463314613240472}
     speed: 5
-    duration: 0
+    delayTime: 0
   box: {fileID: 1857143043730789548}
   movingObj: {fileID: 815675644030657963}
   eDeactiveBox: 0
@@ -1819,8 +1822,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73ca87660d3653347bbf93927a4a167f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  anim: {fileID: 25166064977570131}
   controlType: 0
+  gravityType: 0
+  movementType: 0
+  anim: {fileID: 25166064977570131}
   speed: 0
   updateSpeed: 4
   canJump: 1

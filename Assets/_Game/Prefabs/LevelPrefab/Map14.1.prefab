@@ -7361,7 +7361,7 @@ Rigidbody2D:
     m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!114 &2640874082903514722
 MonoBehaviour:
@@ -8727,6 +8727,7 @@ MonoBehaviour:
   jumpForce: 10
   direction: {x: 0, y: 0, z: 0}
   playerRb: {fileID: 0}
+  p: {fileID: 0}
 --- !u!1 &5775769873230038473
 GameObject:
   m_ObjectHideFlags: 0

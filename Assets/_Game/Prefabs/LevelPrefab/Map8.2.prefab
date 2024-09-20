@@ -216,6 +216,9 @@ MonoBehaviour:
   child: {fileID: 2364307300663746215}
   count: 0
   max: 2
+  rb: {fileID: 0}
+  player: {fileID: 0}
+  isDeactiveBox: 0
 --- !u!114 &6032259031126403950
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -235,6 +238,7 @@ MonoBehaviour:
   isTouching: 0
   EMovingOBJType: 1
   EBox: 1
+  ESaw: 0
 --- !u!1 &1880454995221192391
 GameObject:
   m_ObjectHideFlags: 0
@@ -395,6 +399,7 @@ MonoBehaviour:
   isTouching: 0
   EMovingOBJType: 1
   EBox: 0
+  ESaw: 0
 --- !u!61 &8630949697733256960
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -749,7 +754,7 @@ Rigidbody2D:
     m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!114 &4687587950635640256
 MonoBehaviour:
@@ -1249,8 +1254,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73ca87660d3653347bbf93927a4a167f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  anim: {fileID: 6612850718973791647}
   controlType: 0
+  gravityType: 0
+  movementType: 0
+  anim: {fileID: 6612850718973791647}
   speed: 0
   updateSpeed: 4
   canJump: 1
@@ -2117,6 +2124,9 @@ MonoBehaviour:
   child: {fileID: 6040859490919213078}
   count: 0
   max: 1
+  rb: {fileID: 0}
+  player: {fileID: 0}
+  isDeactiveBox: 0
 --- !u!1001 &14124680970315967
 PrefabInstance:
   m_ObjectHideFlags: 0

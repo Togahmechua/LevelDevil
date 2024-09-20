@@ -44,8 +44,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73ca87660d3653347bbf93927a4a167f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  anim: {fileID: 8805065247252833535}
   controlType: 0
+  gravityType: 0
+  movementType: 0
+  anim: {fileID: 8805065247252833535}
   speed: 0
   updateSpeed: 4
   canJump: 1
@@ -432,6 +434,7 @@ MonoBehaviour:
   box: {fileID: 7428635759635038578}
   saw: {fileID: 8206509501999586228}
   delay: 1
+  scaleType: 0
 --- !u!1 &5215900325233084993
 GameObject:
   m_ObjectHideFlags: 0
@@ -1196,6 +1199,7 @@ MonoBehaviour:
   box: {fileID: 5971358834269116147}
   saw: {fileID: 8206509501999586228}
   delay: 1
+  scaleType: 0
 --- !u!114 &1738193903174362139
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1629,7 +1633,7 @@ Rigidbody2D:
     m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!114 &4880977060700714217
 MonoBehaviour:

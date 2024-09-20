@@ -12,6 +12,7 @@ public class Portal : MonoBehaviour
     [SerializeField] private int max;
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private PlayerCtrl player;
+    [SerializeField] private bool isDeactiveBox;
 
     private void Start()
     {
@@ -34,7 +35,7 @@ public class Portal : MonoBehaviour
             StartCoroutine(PortalIn());
             
 
-            if (count >= max)
+            if (count >= max && isDeactiveBox == false)
             {
                 boxCollider.enabled = false;
             }
@@ -43,7 +44,7 @@ public class Portal : MonoBehaviour
 
     private IEnumerator PortalIn()
     {
-        if (count >= telePosList.Count)
+        if (count >= telePosList.Count && isDeactiveBox == false)
         {
             Debug.LogWarning("No more teleport positions available.");
             yield break;
@@ -55,7 +56,11 @@ public class Portal : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
 
         player.transform.position = telePosList[count].position;
-        count++;
+        if (isDeactiveBox == false)
+        {
+            count++;
+        }
+
         player.playerMovement.anim.SetTrigger(CacheString.TAG_PORTALOUT);
         yield return new WaitForSeconds(0.5f);
         rb.simulated = true;

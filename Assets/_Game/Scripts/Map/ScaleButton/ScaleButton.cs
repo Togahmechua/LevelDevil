@@ -72,6 +72,7 @@ public class ScaleButton : MonoBehaviour
                 {
                     // Start a new camera shake
                     shakeInstance = CameraShaker.Instance.StartShake(magnitude, roughness, fadeInTime);
+                    LevelManager.Ins.endShakingScence = true;
                 });
                 mySequence.AppendInterval(delay);
                 mySequence.AppendCallback(() =>

@@ -780,7 +780,7 @@ Rigidbody2D:
     m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!114 &182837492650528278
 MonoBehaviour:
@@ -10224,6 +10224,7 @@ MonoBehaviour:
   max: 1
   rb: {fileID: 0}
   player: {fileID: 0}
+  isDeactiveBox: 0
 --- !u!1 &5113645993241939490
 GameObject:
   m_ObjectHideFlags: 0
@@ -14873,6 +14874,7 @@ MonoBehaviour:
   max: 1
   rb: {fileID: 0}
   player: {fileID: 0}
+  isDeactiveBox: 0
 --- !u!1 &6937241039881853408
 GameObject:
   m_ObjectHideFlags: 0

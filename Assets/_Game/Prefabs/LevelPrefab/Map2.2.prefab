@@ -319,7 +319,7 @@ Rigidbody2D:
     m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!114 &7086429820875842180
 MonoBehaviour:
@@ -380,8 +380,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73ca87660d3653347bbf93927a4a167f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  anim: {fileID: 9125245237758813885}
   controlType: 0
+  gravityType: 0
+  movementType: 0
+  anim: {fileID: 9125245237758813885}
   speed: 0
   updateSpeed: 4
   canJump: 1

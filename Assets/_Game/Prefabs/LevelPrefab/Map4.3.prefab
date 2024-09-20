@@ -269,9 +269,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73ca87660d3653347bbf93927a4a167f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  controlType: 0
+  gravityType: 0
+  movementType: 0
   anim: {fileID: 8319227988595028999}
   speed: 0
   updateSpeed: 4
+  canJump: 1
   model: {fileID: 3414836954922049337}
   rb: {fileID: 430389499793847737}
   coll: {fileID: 5763427055637899837}
@@ -376,7 +380,7 @@ Rigidbody2D:
     m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!114 &6043129865266607900
 MonoBehaviour:

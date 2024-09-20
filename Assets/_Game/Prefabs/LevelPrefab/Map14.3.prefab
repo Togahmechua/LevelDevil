@@ -626,6 +626,11 @@ MonoBehaviour:
   duration: 1
   speed: 7
   jumpForce: 7.5
+  shakeBtnType: 0
+  magnitude: 0
+  roughness: 0
+  fadeInTime: 0
+  delay: 0
 --- !u!61 &8697432381125548822
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1045,6 +1050,11 @@ MonoBehaviour:
   duration: 1
   speed: 2
   jumpForce: 7.5
+  shakeBtnType: 0
+  magnitude: 0
+  roughness: 0
+  fadeInTime: 0
+  delay: 0
 --- !u!61 &8478657082748434521
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1607,6 +1617,11 @@ MonoBehaviour:
   duration: 1
   speed: 7
   jumpForce: 7.5
+  shakeBtnType: 0
+  magnitude: 0
+  roughness: 0
+  fadeInTime: 0
+  delay: 0
 --- !u!61 &2033894188953175520
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1822,6 +1837,11 @@ MonoBehaviour:
   duration: 3
   speed: 1
   jumpForce: 7.5
+  shakeBtnType: 0
+  magnitude: 0
+  roughness: 0
+  fadeInTime: 0
+  delay: 0
 --- !u!61 &6842247560794163662
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2194,7 +2214,7 @@ Rigidbody2D:
     m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!114 &3869948972699393814
 MonoBehaviour:

@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -19,14 +19,8 @@ public class DestroyOBJ : MonoBehaviour
     {
         if (other.gameObject.transform.position.y < deadZone)
         {
-            StartCoroutine(Delay());
+            LevelManager.Ins.WaitForPlayerInputToRestart();
             isDed = true;
         }
-    }
-
-    private IEnumerator Delay()
-    {
-        yield return new WaitForSeconds(0.5f);
-        LevelManager.Ins.mapScr.LoadLevel();
     }
 }

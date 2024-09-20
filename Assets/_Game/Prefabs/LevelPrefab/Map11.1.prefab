@@ -5679,7 +5679,7 @@ Rigidbody2D:
     m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!114 &4865259996100598757
 MonoBehaviour:
@@ -6789,6 +6789,7 @@ MonoBehaviour:
   box: {fileID: 5239255616636074748}
   saw: {fileID: 2873657569843774818}
   delay: 1
+  scaleType: 0
 --- !u!1 &4118576496428764441
 GameObject:
   m_ObjectHideFlags: 0
@@ -9124,8 +9125,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73ca87660d3653347bbf93927a4a167f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  anim: {fileID: 6699697822217353236}
   controlType: 0
+  gravityType: 0
+  movementType: 0
+  anim: {fileID: 6699697822217353236}
   speed: 0
   updateSpeed: 3.5
   canJump: 1

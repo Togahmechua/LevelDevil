@@ -1053,7 +1053,7 @@ Rigidbody2D:
     m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!114 &6455485322549607738
 MonoBehaviour:
@@ -1209,6 +1209,11 @@ MonoBehaviour:
   duration: 1
   speed: 4
   jumpForce: 7.5
+  shakeBtnType: 0
+  magnitude: 0
+  roughness: 0
+  fadeInTime: 0
+  delay: 0
 --- !u!61 &1137460799257803235
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1271,6 +1276,7 @@ MonoBehaviour:
   - obj: {fileID: 4856897588979776881}
     delayTime: 0
   etype: 0
+  eDeActiveBox: 0
 --- !u!1 &4272333705573585866
 GameObject:
   m_ObjectHideFlags: 0
@@ -1366,6 +1372,7 @@ MonoBehaviour:
   - obj: {fileID: 5744386699299716036}
     delayTime: 3
   etype: 0
+  eDeActiveBox: 0
 --- !u!1 &4856897588979776881
 GameObject:
   m_ObjectHideFlags: 0
@@ -1507,6 +1514,11 @@ MonoBehaviour:
   duration: 1
   speed: 4
   jumpForce: 12
+  shakeBtnType: 0
+  magnitude: 0
+  roughness: 0
+  fadeInTime: 0
+  delay: 0
 --- !u!61 &4246166983900692455
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1571,6 +1583,7 @@ MonoBehaviour:
   isTouching: 0
   EMovingOBJType: 1
   EBox: 0
+  ESaw: 0
 --- !u!114 &5333201914636501762
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1588,6 +1601,7 @@ MonoBehaviour:
   - obj: {fileID: 14893037139405167}
     delayTime: 0
   etype: 0
+  eDeActiveBox: 0
 --- !u!1 &5869141083672366853
 GameObject:
   m_ObjectHideFlags: 0
@@ -1924,8 +1938,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73ca87660d3653347bbf93927a4a167f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  anim: {fileID: 4120664045199705259}
   controlType: 0
+  gravityType: 0
+  movementType: 0
+  anim: {fileID: 4120664045199705259}
   speed: 0
   updateSpeed: 5
   canJump: 1
@@ -2130,6 +2146,11 @@ MonoBehaviour:
   duration: 1
   speed: 4
   jumpForce: 12
+  shakeBtnType: 0
+  magnitude: 0
+  roughness: 0
+  fadeInTime: 0
+  delay: 0
 --- !u!61 &1316778117801264570
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2194,6 +2215,7 @@ MonoBehaviour:
   isTouching: 0
   EMovingOBJType: 1
   EBox: 0
+  ESaw: 0
 --- !u!114 &4552946200500925112
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2211,6 +2233,7 @@ MonoBehaviour:
   - obj: {fileID: 4272333705573585866}
     delayTime: 0
   etype: 0
+  eDeActiveBox: 0
 --- !u!1 &8933811934752401882
 GameObject:
   m_ObjectHideFlags: 0
@@ -2319,6 +2342,11 @@ MonoBehaviour:
   duration: 1
   speed: 4
   jumpForce: 12
+  shakeBtnType: 0
+  magnitude: 0
+  roughness: 0
+  fadeInTime: 0
+  delay: 0
 --- !u!61 &5549107333828397945
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2383,6 +2411,7 @@ MonoBehaviour:
   isTouching: 0
   EMovingOBJType: 1
   EBox: 0
+  ESaw: 0
 --- !u!1001 &57227569035497706
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -5216,6 +5216,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deadZone: -10
   isDed: 0
+  movingObj: {fileID: 0}
   speed: 8
   duration: 1
   direction: 1
@@ -17222,6 +17223,10 @@ PrefabInstance:
     - target: {fileID: 3756533227502531442, guid: 1a8710c1c6825e34a8c8e35528b70d82, type: 3}
       propertyPath: updateSpeed
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3854574584883830440, guid: 1a8710c1c6825e34a8c8e35528b70d82, type: 3}
+      propertyPath: m_CollisionDetection
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6089776821831822125, guid: 1a8710c1c6825e34a8c8e35528b70d82, type: 3}
       propertyPath: m_LocalPosition.x

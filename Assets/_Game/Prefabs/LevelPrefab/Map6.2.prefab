@@ -96,7 +96,7 @@ Rigidbody2D:
     m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!114 &7513329859158397457
 MonoBehaviour:
@@ -241,8 +241,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73ca87660d3653347bbf93927a4a167f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  anim: {fileID: 3345403576190273579}
   controlType: 0
+  gravityType: 0
+  movementType: 0
+  anim: {fileID: 3345403576190273579}
   speed: 0
   updateSpeed: 4
   canJump: 1
@@ -868,12 +870,13 @@ MonoBehaviour:
   moveActions:
   - movePos: {fileID: 7515240481695766340}
     speed: 1
-    duration: 1
+    delayTime: 0
   - movePos: {fileID: 7539874859534256347}
     speed: 5
-    duration: 0.5
+    delayTime: 0
   box: {fileID: 7813264605304672534}
   movingObj: {fileID: 3840729533914288794}
+  eDeactiveBox: 0
 --- !u!61 &7813264605304672534
 BoxCollider2D:
   m_ObjectHideFlags: 0

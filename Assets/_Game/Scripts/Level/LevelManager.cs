@@ -13,6 +13,8 @@ public class LevelManager : MonoBehaviour
     public int curMap;
     public MapSO mapSO;
     public Image imgBackGround;
+    public bool endAnim;
+    public bool endShakingScence;
 
     private List<Map> curMaplList = new List<Map>();
     
@@ -54,6 +56,30 @@ public class LevelManager : MonoBehaviour
             }
             curMaplList.Clear();
             mapScr = null;
+        }
+    }
+
+    public void WaitForPlayerInputToRestart()
+    {
+        StartCoroutine(WaitForInput());
+    }
+
+    private IEnumerator WaitForInput()
+    {
+        Debug.Log("Chờ nhấn phím...");
+
+        yield return new WaitForSeconds(1f);  // Chờ 1 giây trước khi bắt đầu kiểm tra phím
+
+        while (true)
+        {
+            if (Input.anyKeyDown)
+            {
+                Debug.Log("Phím được nhấn, load level...");
+                mapScr.LoadLevel(); // Gọi load level
+                yield break;
+            }
+
+            yield return null;
         }
     }
 

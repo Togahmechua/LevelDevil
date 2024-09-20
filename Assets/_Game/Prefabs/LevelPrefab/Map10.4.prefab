@@ -211,7 +211,7 @@ Rigidbody2D:
     m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!114 &6538581371512231561
 MonoBehaviour:
@@ -678,8 +678,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73ca87660d3653347bbf93927a4a167f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  anim: {fileID: 5989577171530680928}
   controlType: 0
+  gravityType: 0
+  movementType: 0
+  anim: {fileID: 5989577171530680928}
   speed: 0
   updateSpeed: 5
   canJump: 1
@@ -6899,6 +6901,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 121825024029680199}
     m_Modifications:
+    - target: {fileID: 413983908234023448, guid: 67e55c783fa35164a959343a9b3b1f10, type: 3}
+      propertyPath: m_SortingOrder
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6937343467970611632, guid: 67e55c783fa35164a959343a9b3b1f10, type: 3}
       propertyPath: m_Name
       value: Gate 1

@@ -1571,6 +1571,8 @@ MonoBehaviour:
   box: {fileID: 8283301363965690883}
   isTouching: 0
   EMovingOBJType: 1
+  EBox: 0
+  ESaw: 0
 --- !u!1 &5859049382018076774
 GameObject:
   m_ObjectHideFlags: 0
@@ -2239,7 +2241,7 @@ Rigidbody2D:
     m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!114 &2642853129889496735
 MonoBehaviour:
@@ -2495,8 +2497,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73ca87660d3653347bbf93927a4a167f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  anim: {fileID: 6874486153251397737}
   controlType: 0
+  gravityType: 0
+  movementType: 0
+  anim: {fileID: 6874486153251397737}
   speed: 0
   updateSpeed: 4
   canJump: 1

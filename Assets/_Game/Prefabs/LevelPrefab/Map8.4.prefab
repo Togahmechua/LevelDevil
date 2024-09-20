@@ -394,6 +394,7 @@ MonoBehaviour:
   max: 1
   rb: {fileID: 0}
   player: {fileID: 0}
+  isDeactiveBox: 0
 --- !u!114 &5945319315073826891
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -528,7 +529,7 @@ Rigidbody2D:
     m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!114 &8060079405171239008
 MonoBehaviour:
@@ -941,6 +942,7 @@ MonoBehaviour:
   max: 1
   rb: {fileID: 0}
   player: {fileID: 0}
+  isDeactiveBox: 0
 --- !u!114 &4922639790231375635
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2183,6 +2185,7 @@ MonoBehaviour:
   max: 1
   rb: {fileID: 0}
   player: {fileID: 0}
+  isDeactiveBox: 0
 --- !u!114 &2906867817720670574
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3802,6 +3805,7 @@ MonoBehaviour:
   max: 1
   rb: {fileID: 0}
   player: {fileID: 0}
+  isDeactiveBox: 0
 --- !u!114 &6537767665508740544
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4260,6 +4264,7 @@ MonoBehaviour:
   max: 1
   rb: {fileID: 0}
   player: {fileID: 0}
+  isDeactiveBox: 0
 --- !u!114 &782218632509051068
 MonoBehaviour:
   m_ObjectHideFlags: 0

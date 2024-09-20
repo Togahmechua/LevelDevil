@@ -1,4 +1,5 @@
 using DG.Tweening;
+using EZCameraShake;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -40,6 +41,15 @@ public class EscCanvasUI : UICanvas
     {
         escImg.sprite = ecsSpr[1];
         UIManager.Ins.OpenUI<AnimCanvas2>().OnInit2();
+        if (LevelManager.Ins.endAnim == true)
+        {
+            UIManager.Ins.CloseUI<EndGameCanvas>();
+        }
+        if (LevelManager.Ins.endShakingScence == true)
+        {
+            CameraShaker.Instance.StopAllShaking();
+            LevelManager.Ins.endShakingScence = false;
+        }
         Observer.Notify("Wait", 1f, new Action(NextUI));
     }
 

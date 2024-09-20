@@ -37,13 +37,17 @@ public class PlayerCtrl : DestroyOBJ
     {
         playerMovement.OnInit();
         isDed = false;
+        this.gameObject.SetActive(true);
     }
 
     public void Die()
     {
+        this.gameObject.SetActive(false);
         ParticlePool.Play(ParticleType.DieEff, transform.position, Quaternion.identity);
         CameraShaker.Instance.ShakeOnce(4f, 4f, 0.1f, 0.1f);
         isDed = true;
+
+        LevelManager.Ins.WaitForPlayerInputToRestart();
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -60,7 +64,6 @@ public class PlayerCtrl : DestroyOBJ
         {
             Debug.Log("Player Died");
             Die();
-            LoadLevel();
         }
         
         Coin coins = Cache.GetCoins(other);
