@@ -60,6 +60,8 @@ public class ScaleButton : MonoBehaviour
             playerCtrl = player;
             box.enabled = false;
             btnSprite.sprite = spr;
+            SoundFXMNG.Ins.PlaySFX(SoundFXMNG.Ins.button);
+
             ScalePlayer();
             SetPlayerDetails(speed, jumpForce);
 

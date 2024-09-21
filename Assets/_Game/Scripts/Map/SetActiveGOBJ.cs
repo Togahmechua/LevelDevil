@@ -9,6 +9,7 @@ public class SetActiveGOBJ : MonoBehaviour
     [SerializeField] private List<ObjList> listObj;
     [SerializeField] private ESetActiveType etype;
     [SerializeField] private EDeActiveBox eDeActiveBox;
+    [SerializeField] private bool music;
 
     [Serializable]
     public class ObjList
@@ -35,6 +36,10 @@ public class SetActiveGOBJ : MonoBehaviour
                 {
                     yield return new WaitForSeconds(item.delayTime);
                     item.obj.SetActive(true);
+                    if (!music)
+                    {
+                        SoundFXMNG.Ins.PlaySFX(SoundFXMNG.Ins.trap);
+                    }
                 }
 
                 if (eDeActiveBox == EDeActiveBox.DeActive)
@@ -51,6 +56,7 @@ public class SetActiveGOBJ : MonoBehaviour
                 {
                     yield return new WaitForSeconds(item.delayTime);
                     item.obj.SetActive(false);
+                    SoundFXMNG.Ins.PlaySFX(SoundFXMNG.Ins.trap);
                 }
 
                 if (eDeActiveBox == EDeActiveBox.DeActive)

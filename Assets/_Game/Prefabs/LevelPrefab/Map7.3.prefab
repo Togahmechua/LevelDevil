@@ -44,8 +44,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73ca87660d3653347bbf93927a4a167f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  anim: {fileID: 5229193332327155494}
   controlType: 0
+  gravityType: 0
+  movementType: 0
+  anim: {fileID: 5229193332327155494}
   speed: 0
   updateSpeed: 4
   canJump: 1
@@ -310,6 +312,7 @@ MonoBehaviour:
   box: {fileID: 1594353863354838609}
   movingObj: {fileID: 5457266236572976221}
   eDeactiveBox: 0
+  music: 1
 --- !u!61 &1594353863354838609
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1028,6 +1031,7 @@ MonoBehaviour:
   box: {fileID: 5900656445742702856}
   movingObj: {fileID: 5103691536587213902}
   eDeactiveBox: 0
+  music: 0
 --- !u!61 &5900656445742702856
 BoxCollider2D:
   m_ObjectHideFlags: 0

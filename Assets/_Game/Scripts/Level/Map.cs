@@ -66,6 +66,7 @@ public class Map : GameUnit
         if (CurLevel < levelList.Count)
         {
             level = Instantiate(levelList[CurLevel], transform);
+            SoundFXMNG.Ins.PlaySFX(SoundFXMNG.Ins.revive);
             Debug.Log("Load Level " + CurLevel);
         }
         else

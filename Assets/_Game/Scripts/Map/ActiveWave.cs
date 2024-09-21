@@ -3,6 +3,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static Unity.IO.LowLevel.Unsafe.AsyncReadManagerMetrics;
 
 public class ActiveWave : MonoBehaviour
 {
@@ -23,7 +24,11 @@ public class ActiveWave : MonoBehaviour
 
             // Tạo chuỗi Tweening cho từng phần tử
             Sequence waveSequence = DOTween.Sequence();
-            waveSequence.AppendCallback(() => spike.gameObject.SetActive(true))
+            waveSequence.AppendCallback(() => 
+            {
+                spike.gameObject.SetActive(true);
+                SoundFXMNG.Ins.PlaySFX(SoundFXMNG.Ins.walltrap);
+            })
                         .SetDelay(index * delayBetweenItems);
 
             waveSequence.Play();

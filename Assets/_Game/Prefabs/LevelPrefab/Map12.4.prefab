@@ -11787,6 +11787,7 @@ MonoBehaviour:
     delayTime: 1
   etype: 0
   eDeActiveBox: 0
+  music: 0
 --- !u!114 &335536543549901145
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11818,6 +11819,7 @@ MonoBehaviour:
   box: {fileID: 1070004954339155615}
   movingObj: {fileID: 5395076773256723623}
   eDeactiveBox: 0
+  music: 1
 --- !u!1 &7281540308461058667
 GameObject:
   m_ObjectHideFlags: 0
@@ -14467,6 +14469,7 @@ MonoBehaviour:
     delayTime: 0
   etype: 0
   eDeActiveBox: 0
+  music: 0
 --- !u!1 &9120066250031439174
 GameObject:
   m_ObjectHideFlags: 0

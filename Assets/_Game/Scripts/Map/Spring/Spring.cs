@@ -19,6 +19,7 @@ public class Spring : MonoBehaviour
             collision.gameObject.GetComponent<Rigidbody2D>().AddForce(Vector2.up * bounce, ForceMode2D.Impulse);
             Observer.Notify("Wait", 0.5f, new Action(()
             => anim.SetTrigger(CacheString.TAG_IDLE)));
+            SoundFXMNG.Ins.PlaySFX(SoundFXMNG.Ins.bounce);
         }
     }
 }

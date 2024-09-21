@@ -10,6 +10,8 @@ public class StepByStepMover : MonoBehaviour
     [SerializeField] private BoxCollider2D box;
     [SerializeField] private Transform movingObj;
     [SerializeField] private EDeActiveBox eDeactiveBox;
+    [SerializeField] private bool music;
+
     private int currentActionIndex = 0;
     private bool isMoving = false;
 
@@ -54,6 +56,10 @@ public class StepByStepMover : MonoBehaviour
         while (currentActionIndex < moveActions.Count)
         {
             MoveAction action = moveActions[currentActionIndex];
+            if (!music)
+            {
+                SoundFXMNG.Ins.PlaySFX(SoundFXMNG.Ins.walltrap);
+            }
             yield return StartCoroutine(MoveToPosition(action.movePos.position, action.speed));
             yield return new WaitForSeconds(action.delayTime);
 

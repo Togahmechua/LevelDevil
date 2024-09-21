@@ -21,6 +21,7 @@ public class FlappyMovement : MonoBehaviour
         {
             rb.velocity = new Vector2(speed, strength);
             ChangeAnim(CacheString.TAG_ISRUNNING, true);
+            SoundFXMNG.Ins.PlaySFX(SoundFXMNG.Ins.jump);
         }
 
         rb.velocity = new Vector2(rb.velocity.x, Mathf.Clamp(rb.velocity.y, maxFallSpeed, maxRiseSpeed));

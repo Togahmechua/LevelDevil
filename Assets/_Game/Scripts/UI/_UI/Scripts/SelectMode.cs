@@ -18,6 +18,7 @@ public class SelectMode : UICanvas
     private void SelectModeUI()
     { 
         UIManager.Ins.OpenUI<AnimCanvas2>();
+        SoundFXMNG.Ins.PlaySFX(SoundFXMNG.Ins.button);
         Observer.Notify("Wait", 1f, new Action(NextUI));
     }
 

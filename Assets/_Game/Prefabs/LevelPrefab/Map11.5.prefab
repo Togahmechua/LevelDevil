@@ -2396,6 +2396,7 @@ MonoBehaviour:
     delayTime: 0.5
   etype: 0
   eDeActiveBox: 0
+  music: 1
 --- !u!1 &7611316149035498059
 GameObject:
   m_ObjectHideFlags: 0

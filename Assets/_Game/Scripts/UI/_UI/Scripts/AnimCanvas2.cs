@@ -13,12 +13,13 @@ public class AnimCanvas2 : UICanvas
 
     public void OnInit2()
     {
+        DoAction();
         Wait();
     }
 
     protected virtual void DoAction()
     {
-        //For override
+        StartCoroutine(SoundEff());
     }
 
     public void Wait()
@@ -30,5 +31,11 @@ public class AnimCanvas2 : UICanvas
     {
         UIManager.Ins.CloseUI<AnimCanvas2>();
         //Debug.Log("AnimCanvas2");
+    }
+
+    private IEnumerator SoundEff()
+    {
+        yield return new WaitForSeconds(0.2f);
+        SoundFXMNG.Ins.PlaySFX(SoundFXMNG.Ins.outtro);
     }
 }

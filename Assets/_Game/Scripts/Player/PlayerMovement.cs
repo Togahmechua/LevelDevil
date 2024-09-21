@@ -77,6 +77,7 @@ public class PlayerMovement : MonoBehaviour
             case EControlType.SpecialMove:
                 //Di chuyen nguoc
                 rb.velocity = new Vector2(-dirX * speed, rb.velocity.y);
+                
                 if (Mathf.Abs(dirX) > 0.1f)
                 {
                     model.rotation = Quaternion.Euler(new Vector3(rb.gravityScale < 0 ? 180f : 0f, dirX < 0 ? 0f : 180f, 0f));
@@ -89,6 +90,7 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetButtonDown("Jump") && IsGrounded() && canJump)
         {
             Jump();
+            SoundFXMNG.Ins.PlaySFX(SoundFXMNG.Ins.jump);
         }
 
         // Check falling

@@ -46,7 +46,7 @@ public class PlayerCtrl : DestroyOBJ
         ParticlePool.Play(ParticleType.DieEff, transform.position, Quaternion.identity);
         CameraShaker.Instance.ShakeOnce(4f, 4f, 0.1f, 0.1f);
         isDed = true;
-
+        SoundFXMNG.Ins.PlaySFX(SoundFXMNG.Ins.dead);
         LevelManager.Ins.WaitForPlayerInputToRestart();
     }
 
@@ -57,12 +57,17 @@ public class PlayerCtrl : DestroyOBJ
         {
             LevelManager.Ins.mapScr.CurLevel++;
             Observer.Notify("Wait", 1f, new Action(OpenAnim));
+            SoundFXMNG.Ins.PlaySFX(SoundFXMNG.Ins.stageclear);
         }
 
         Spikes spike = Cache.GetSpikes(other);
         if (spike != null)
         {
             Debug.Log("Player Died");
+            if (spike is Saw)
+            {
+                SoundFXMNG.Ins.PlaySFX(SoundFXMNG.Ins.saw);
+            }
             Die();
         }
         
@@ -70,6 +75,7 @@ public class PlayerCtrl : DestroyOBJ
         if (coins != null)
         {
             coins.isTook();
+            SoundFXMNG.Ins.PlaySFX(SoundFXMNG.Ins.coin);
         }
 
         ChangeMoveType changeMoveType = Cache.GetChangeMoveType(other);

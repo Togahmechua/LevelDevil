@@ -9,5 +9,6 @@ public class ChangeMoveType : MonoBehaviour
     public void DeactiveBox()
     {
         box.enabled = false;
+        SoundFXMNG.Ins.PlaySFX(SoundFXMNG.Ins.walltrap);
     }
 }

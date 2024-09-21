@@ -321,7 +321,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1771039788760716728}
   - component: {fileID: 7428635759635038578}
-  - component: {fileID: 7287233152110591352}
   - component: {fileID: 1930035419581385415}
   m_Layer: 6
   m_Name: Scale
@@ -390,24 +389,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.2806046, y: 1.9887817}
   m_EdgeRadius: 0
---- !u!114 &7287233152110591352
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3730138644336343133}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f63306ff94d8c046aba6626b055a153, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  box: {fileID: 7428635759635038578}
-  listObj:
-  - obj: {fileID: 6605435343818152072}
-    delayTime: 0.2
-  etype: 0
-  eDeActiveBox: 0
 --- !u!114 &1930035419581385415
 MonoBehaviour:
   m_ObjectHideFlags: 0

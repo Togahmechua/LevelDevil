@@ -23,6 +23,7 @@ public class FlappyButton : MonoBehaviour
             box.enabled = false;
             btnSprite.sprite = spr;
             flappyMovement.speed = this.speed;
+            SoundFXMNG.Ins.PlaySFX(SoundFXMNG.Ins.button);
             if (Mathf.Abs(flappyMovement.speed) > 0.1f)
             {
                 model.rotation = Quaternion.Euler(new Vector3(0f, flappyMovement.speed > 0 ? 0f : 180f, 0f));

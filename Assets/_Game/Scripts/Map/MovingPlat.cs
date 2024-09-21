@@ -10,6 +10,7 @@ public class MovingPlat : MonoBehaviour
     [SerializeField] private EMove moveType;
     [SerializeField] private BoxCollider2D boxCollider2D;
     [SerializeField] private bool isTouching;
+    [SerializeField] private bool flag;
 
     private void Update()
     {
@@ -25,9 +26,19 @@ public class MovingPlat : MonoBehaviour
         {
             case EMove.NormalMove:
                 transform.DOMove(platPos.position, duration);
+                if(!flag)
+                {
+                    SoundFXMNG.Ins.PlaySFX(SoundFXMNG.Ins.walltrap);
+                    flag = true;
+                }
                 break;
             case EMove.LocalMove:
                 transform.DOLocalMove(platPos.position, duration);
+                if (!flag)
+                {
+                    SoundFXMNG.Ins.PlaySFX(SoundFXMNG.Ins.walltrap);
+                    flag = true;
+                }
                 break;
             default:
                 Debug.Log("Nothing");

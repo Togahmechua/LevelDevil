@@ -13,6 +13,7 @@ public class MovingObj : MonoBehaviour
     [SerializeField] private EMovingOBJType EMovingOBJType;
     [SerializeField] private EBox EBox;
     [SerializeField] private ESaw ESaw;
+    [SerializeField] private bool flag;
 
     private Saw saw;
 
@@ -101,9 +102,19 @@ public class MovingObj : MonoBehaviour
             {
                 case EMovingOBJType.MovingParent:
                     Move();
+                    if (!flag)
+                    {
+                        SoundFXMNG.Ins.PlaySFX(SoundFXMNG.Ins.walltrap);
+                        flag = true;
+                    }
                     break;
                 case EMovingOBJType.MovingGameObj:
                     gameObj.DOMove(movePos.position, duration);
+                    if (!flag)
+                    {
+                        SoundFXMNG.Ins.PlaySFX(SoundFXMNG.Ins.walltrap);
+                        flag = true;
+                    }
                     break;
             }     
         }

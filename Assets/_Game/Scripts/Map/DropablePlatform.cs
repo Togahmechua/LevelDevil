@@ -53,6 +53,7 @@ public class DropablePlatform : DestroyOBJ
         }
 
         movingObj.DOBlendableMoveBy(moveVector * speed, duration);
+        SoundFXMNG.Ins.PlaySFX(SoundFXMNG.Ins.walltrap);
     }
 
     private void Move(DirectionEnum direction)

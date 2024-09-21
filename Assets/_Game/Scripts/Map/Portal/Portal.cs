@@ -32,6 +32,7 @@ public class Portal : MonoBehaviour
             rb = playerCtrl.GetComponent<Rigidbody2D>();
             player = playerCtrl;
 
+            SoundFXMNG.Ins.PlaySFX(SoundFXMNG.Ins.revive);
             StartCoroutine(PortalIn());
             
 

@@ -16,6 +16,7 @@ public class AddForce : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space) && canJump)
         {
             Jump();
+            SoundFXMNG.Ins.PlaySFX(SoundFXMNG.Ins.walltrap);
         }
 
         if (rb.velocity.y < 0)
