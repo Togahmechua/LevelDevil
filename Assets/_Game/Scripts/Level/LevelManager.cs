@@ -22,8 +22,24 @@ public class LevelManager : MonoBehaviour
     private void Awake()
     {
         LevelManager.ins = this;
+        OnInit();
+    }
+
+    public void OnInit()
+    {
         curMap = PlayerPrefs.GetInt("CurrentMap", 0);
         mapSO.LoadWinStates();
+    }
+
+    public void ResetWinStates()
+    {
+        // Reset trạng thái chiến thắng cho tất cả các màn trong mapSO
+        for (int i = 0; i < mapSO.mapList.Count; i++)
+        {
+            mapSO.mapList[i].isWon = false;
+        }
+
+        Debug.Log("Reset all win states");
     }
 
     public void LoadMapByID(int id)

@@ -26,4 +26,12 @@ public class SelectLevelUI : UICanvas
             listGOBJ[listGOBJ.Length-1].gameObject.SetActive(true);
         }
     }
+
+    public void ResetAllGate()
+    {
+        for (int i = 1; i < listGOBJ.Length; i++)
+        {
+            listGOBJ[i].gameObject.SetActive(false);
+        }
+    }
 }

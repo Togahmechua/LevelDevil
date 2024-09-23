@@ -44,10 +44,12 @@ public class YesBtn : MonoBehaviour
         PlayerPrefs.DeleteAll();
         Debug.Log("Delete All");
 
+        LevelManager.Ins.ResetWinStates();
         yield return new WaitForSeconds(0.5f);
 
         // Đóng và mở UI sau khi hoàn thành
         UIManager.Ins.CloseUI<SettingCanvas>();
-        UIManager.Ins.OpenUI<SelectLevelUI>();
+        LevelManager.Ins.OnInit();
+        UIManager.Ins.OpenUI<SelectLevelUI>().ResetAllGate();
     }
 }
