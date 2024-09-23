@@ -470,6 +470,7 @@ MonoBehaviour:
   box: {fileID: 8761246462206491814}
   movingObj: {fileID: 3893387285627153107}
   eDeactiveBox: 0
+  music: 0
 --- !u!1 &2824030417428127908
 GameObject:
   m_ObjectHideFlags: 0
@@ -593,6 +594,7 @@ MonoBehaviour:
     delayTime: 0
   etype: 0
   eDeActiveBox: 1
+  music: 0
 --- !u!1 &2896169989108066975
 GameObject:
   m_ObjectHideFlags: 0
@@ -1523,6 +1525,7 @@ MonoBehaviour:
   box: {fileID: 7232600592710912750}
   movingObj: {fileID: 4275326720118387720}
   eDeactiveBox: 0
+  music: 1
 --- !u!1 &6455274680016839627
 GameObject:
   m_ObjectHideFlags: 0
@@ -2082,6 +2085,7 @@ MonoBehaviour:
     delayTime: 0
   etype: 0
   eDeActiveBox: 0
+  music: 0
 --- !u!1001 &65821908547939930
 PrefabInstance:
   m_ObjectHideFlags: 0

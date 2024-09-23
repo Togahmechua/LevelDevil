@@ -212,6 +212,7 @@ MonoBehaviour:
   box: {fileID: 0}
   movingObj: {fileID: 2936748678023400493}
   eDeactiveBox: 0
+  music: 0
 --- !u!1 &512515740777853149
 GameObject:
   m_ObjectHideFlags: 0
@@ -599,6 +600,7 @@ MonoBehaviour:
   box: {fileID: 2277611880503753463}
   movingObj: {fileID: 5198150721918780523}
   eDeactiveBox: 0
+  music: 0
 --- !u!1 &935963664464765659
 GameObject:
   m_ObjectHideFlags: 0
@@ -1973,6 +1975,7 @@ MonoBehaviour:
   box: {fileID: 1141079892371343590}
   movingObj: {fileID: 5198150721918780523}
   eDeactiveBox: 0
+  music: 0
 --- !u!1 &4899037334983315520
 GameObject:
   m_ObjectHideFlags: 0
@@ -2207,6 +2210,7 @@ MonoBehaviour:
   box: {fileID: 2714454029696183203}
   movingObj: {fileID: 8097600714386976728}
   eDeactiveBox: 0
+  music: 0
 --- !u!1 &5309725946599255371
 GameObject:
   m_ObjectHideFlags: 0
@@ -2304,6 +2308,7 @@ MonoBehaviour:
   box: {fileID: 3009556958003571485}
   movingObj: {fileID: 207085710686388330}
   eDeactiveBox: 0
+  music: 0
 --- !u!1 &5367581230651478924
 GameObject:
   m_ObjectHideFlags: 0
@@ -2721,6 +2726,7 @@ MonoBehaviour:
   box: {fileID: 8176151325699848289}
   movingObj: {fileID: 3836479873819051236}
   eDeactiveBox: 0
+  music: 0
 --- !u!1 &6255456772212741006
 GameObject:
   m_ObjectHideFlags: 0
@@ -2818,6 +2824,7 @@ MonoBehaviour:
   box: {fileID: 5148718220183060914}
   movingObj: {fileID: 6041922304942958053}
   eDeactiveBox: 0
+  music: 0
 --- !u!1 &6323543293146285178
 GameObject:
   m_ObjectHideFlags: 0
@@ -3014,6 +3021,7 @@ MonoBehaviour:
   box: {fileID: 0}
   movingObj: {fileID: 7142516091203751129}
   eDeactiveBox: 0
+  music: 1
 --- !u!1 &6697198372292442106
 GameObject:
   m_ObjectHideFlags: 0
@@ -3695,6 +3703,7 @@ MonoBehaviour:
   box: {fileID: 6118421042963390983}
   movingObj: {fileID: 3159692758666419284}
   eDeactiveBox: 0
+  music: 0
 --- !u!1 &8229464398980778891
 GameObject:
   m_ObjectHideFlags: 0

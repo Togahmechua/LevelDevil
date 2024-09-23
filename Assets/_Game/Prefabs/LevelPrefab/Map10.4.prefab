@@ -634,6 +634,7 @@ MonoBehaviour:
   box: {fileID: 0}
   movingObj: {fileID: 163061406544005842}
   eDeactiveBox: 0
+  music: 1
 --- !u!1 &2122774290195692692
 GameObject:
   m_ObjectHideFlags: 0
@@ -749,6 +750,7 @@ MonoBehaviour:
   box: {fileID: 0}
   movingObj: {fileID: 7493581333473092906}
   eDeactiveBox: 0
+  music: 0
 --- !u!1 &3158781948770395619
 GameObject:
   m_ObjectHideFlags: 0

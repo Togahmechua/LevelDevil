@@ -761,6 +761,7 @@ MonoBehaviour:
     delayTime: 0
   etype: 0
   eDeActiveBox: 0
+  music: 0
 --- !u!61 &8209704780880425119
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1804,7 +1805,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4270677515770949882, guid: b7039f2f3f344474facab177e974eaae, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -7.35
+      value: -7.38
       objectReference: {fileID: 0}
     - target: {fileID: 4270677515770949882, guid: b7039f2f3f344474facab177e974eaae, type: 3}
       propertyPath: m_LocalPosition.z
@@ -4118,7 +4119,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4270677515770949882, guid: b7039f2f3f344474facab177e974eaae, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -7.35
+      value: -7.38
       objectReference: {fileID: 0}
     - target: {fileID: 4270677515770949882, guid: b7039f2f3f344474facab177e974eaae, type: 3}
       propertyPath: m_LocalPosition.z
@@ -5498,7 +5499,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4270677515770949882, guid: b7039f2f3f344474facab177e974eaae, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -7.35
+      value: -7.38
       objectReference: {fileID: 0}
     - target: {fileID: 4270677515770949882, guid: b7039f2f3f344474facab177e974eaae, type: 3}
       propertyPath: m_LocalPosition.z

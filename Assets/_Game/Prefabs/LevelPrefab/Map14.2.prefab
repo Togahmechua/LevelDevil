@@ -539,6 +539,7 @@ MonoBehaviour:
   EMovingOBJType: 1
   EBox: 0
   ESaw: 0
+  flag: 0
 --- !u!114 &8168330563110452927
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -559,6 +560,7 @@ MonoBehaviour:
   EMovingOBJType: 1
   EBox: 0
   ESaw: 0
+  flag: 1
 --- !u!114 &4193629304606740884
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -577,6 +579,7 @@ MonoBehaviour:
     delayTime: 0
   etype: 0
   eDeActiveBox: 0
+  music: 0
 --- !u!1 &2136715619318521143
 GameObject:
   m_ObjectHideFlags: 0
@@ -743,6 +746,7 @@ MonoBehaviour:
   EMovingOBJType: 1
   EBox: 0
   ESaw: 0
+  flag: 0
 --- !u!114 &5702453124718550690
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -763,6 +767,7 @@ MonoBehaviour:
   EMovingOBJType: 1
   EBox: 0
   ESaw: 0
+  flag: 1
 --- !u!1 &3647226219595086506
 GameObject:
   m_ObjectHideFlags: 0
@@ -1590,6 +1595,7 @@ MonoBehaviour:
   EMovingOBJType: 1
   EBox: 0
   ESaw: 0
+  flag: 0
 --- !u!114 &6967456385488078347
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1610,6 +1616,7 @@ MonoBehaviour:
   EMovingOBJType: 1
   EBox: 0
   ESaw: 0
+  flag: 0
 --- !u!1 &7680742743992453564
 GameObject:
   m_ObjectHideFlags: 0

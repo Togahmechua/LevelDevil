@@ -59,6 +59,14 @@ public class LevelManager : MonoBehaviour
         }
     }
 
+    public void DestroyWhenEsc()
+    {
+        if (mapScr != null)
+        {
+            DespawnMap();
+        }
+    }
+
     public void WaitForPlayerInputToRestart()
     {
         StartCoroutine(WaitForInput());

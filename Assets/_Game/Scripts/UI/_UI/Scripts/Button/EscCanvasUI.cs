@@ -28,6 +28,7 @@ public class EscCanvasUI : UICanvas
             EscFunc();
             isInteractable = false;
             SoundFXMNG.Ins.PlaySFX(SoundFXMNG.Ins.button);
+            LevelManager.Ins.DestroyWhenEsc();
             /*Cursor.visible = false;*/
         }
     }
